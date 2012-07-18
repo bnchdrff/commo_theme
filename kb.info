@@ -349,3 +349,7 @@ settings[alpha_region_footer_second_suffix] = ''
 settings[alpha_region_footer_second_weight] = '2'
 settings[alpha_region_footer_second_css] = ''
 version = '1.x'
+libraries[kb][name] = custom
+libraries[kb][description] = KB theme custom js 
+libraries[kb][js][0][file] = custom.js
+libraries[kb][js][0][options][weight] = 27
