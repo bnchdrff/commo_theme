@@ -20,7 +20,8 @@
               output += ' - ' + entry.author;
             }
             if (entry.publishedDate.length > 0) {
-              output += ' - ' + entry.publishedDate;
+              var date = $.timeago(new Date(entry.publishedDate));
+              output += ' - <span class="git-date" title="' + date + '" >' + date + '</div>';
             }
             if (entry.content.length > 0) {
               output += '<br />' + entry.content;
