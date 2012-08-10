@@ -35,6 +35,10 @@
       google.setOnLoadCallback(getRSS);
     }
 
+    $('#boxes-box-feedback a').hover( function() {
+      $('#boxes-box-feedback .boxes-box-content').toggleClass('hover');
+    });
+
   })
 
 })(jQuery);

@@ -11,7 +11,8 @@
       feed.setNumEntries(4); // specify number of entries to load
       feed.load(function(result) {
         if (!result.error) {
-          var container = $('.field-name-field-git-activity-rss- .field-items');
+          $('.field-name-field-git-activity-rss-').prepend('<div class="activity"><span>Activity</span></div>');
+          var container = $('.field-name-field-git-activity-rss-');
           var output = '<ul class="rss-feed-items">';
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
@@ -23,9 +24,9 @@
               var date = $.timeago(new Date(entry.publishedDate));
               output += ' - <span class="git-date" title="' + date + '" >' + date + '</div>';
             }
-            if (entry.content.length > 0) {
+            /*if (entry.content.length > 0) {
               output += '<br />' + entry.content;
-            }
+            }*/
             output += '</li>';
           }
           output += '</ul>';
