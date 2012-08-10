@@ -174,105 +174,11 @@ li.sfHover > a > .sf-sub-indicator,
 .sf-menu li:hover,
 .sf-menu li.sfHover {
 }
-.sf-menu.sf-horizontal > li.first {
-}
-.sf-menu.sf-horizontal > li.last,
-.sf-menu.sf-horizontal li li.sf-total-children-1 > ul > li.first,
-.sf-menu.sf-vertical li li.sf-total-children-1 > ul > li.first,
-.sf-menu.sf-navbar li li li.sf-total-children-1 > ul > li.first {
-}
-.sf-menu.sf-vertical > li.first {
-}
-.sf-menu.sf-vertical li.last,
-.sf-menu.sf-horizontal li li.last,
-.sf-menu.sf-navbar li li li.last,
-.sf-menu li.sf-total-children-1 > ul > li.first {
-}
-.sf-menu.sf-vertical.sf-total-items-1 > li.first,
-.sf-menu.sf-horizontal.sf-total-items-1 > li.first {
-}
-.sf-menu.sf-navbar > li.first {
-}
-.sf-menu.sf-navbar > li > ul > li.first {
-}
-.sf-menu.sf-navbar > li > ul > li.last {
-}
-.sf-menu.sf-navbar > li.last,
-.sf-menu.sf-navbar li li li li.first,
-.sf-menu.sf-vertical li li.first,
-.sf-menu.sf-horizontal li li li.first {
-}
-.sf-menu.sf-navbar.rtl > li.first {
-}
-.sf-menu.sf-horizontal.rtl > li.last,
-.sf-menu.sf-horizontal.rtl li li.sf-total-children-1 > ul > li.first,
-.sf-menu.sf-vertical.rtl li li.sf-total-children-1 > ul > li.first,
-.sf-menu.sf-navbar.rtl li li li.sf-total-children-1 > ul > li.first {
-}
-.sf-menu.sf-horizontal.rtl > li.first {
-}
-.sf-menu.sf-navbar.rtl > li > ul > li.first {
-}
-.sf-menu.sf-navbar.rtl > li.last,
-.sf-menu.sf-navbar.rtl li li li li.first,
-.sf-menu.sf-vertical.rtl li li.first,
-.sf-menu.sf-horizontal.rtl li li li.first {
-}
-.sf-menu.sf-navbar.rtl > li > ul > li.last {
-}
-.sf-menu.sf-vertical.rtl li.last,
-.sf-menu.sf-horizontal.rtl li li.last,
-.sf-menu.sf-navbar.rtl li li li.last,
-.sf-menu.rtl li.sf-total-children-1 > ul > li.first {
-}
 .sf-menu li ul.sf-megamenu li ol li {
   background: none;
   border: 0 none;
 }
-.sf-menu li ul.sf-megamenu li.sf-megamenu-wrapper {
-}
-.sf-menu li ul.sf-megamenu  li.sf-megamenu-wrapper,
-.sf-menu li ul.sf-megamenu  li.sf-megamenu-wrapper:hover,
-.sf-menu li ul.sf-megamenu  li.sf-megamenu-wrapper.sfHover {
-}
-.sf-menu li ul.sf-megamenu li.sf-megamenu-wrapper ol,
-.sf-menu li ul.sf-megamenu li.sf-megamenu-wrapper ol li {
-  margin: 0;
-  padding: 0;
-}
-.sf-menu ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column > a {
-  font-weight: bold;
-  padding: 1em;
-}
-.sf-menu ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column:hover > a {
-  color: #555555;
-}
-.sf-menu ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column > a:focus,
-.sf-menu ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column > a:hover,
-.sf-menu ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column > a:active {
-  color: #222222;
-}
-.sf-menu ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column ol li {
-  margin: 0 0 0 1em;
-  padding: 0 0 0 1em;
-}
-.sf-menu.rtl ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column ol li {
-  background-position: right center;
-  margin: 0 1em 0 0;
-  padding: 0 1em 0 0;
-}
-.sf-menu ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column ol li a {
-  font-size: 0.8em;
-  padding: 0.5em 0;
-}
-.sf-menu ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column {
-  display: inline;
-  float: left;
-  width: 12em;
-}
-.sf-menu.rtl ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column {
-  float: right;
-}
+
 .sf-menu li.sf-parent-children-1 ul.sf-megamenu {
   width: 12em;
 }
