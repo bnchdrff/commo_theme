@@ -46,7 +46,7 @@ li.sfHover > a > .sf-sub-indicator,
 }
 .sf-menu.sf-horizontal li:hover > ul,
 .sf-menu.sf-horizontal li.sfHover > ul {
-  background: transparent url(../images/arrow_dropdown.png) no-repeat top left;
+  background: transparent url(../images/arrow_dropdown.png) no-repeat 20px 0;
   top: 28px;
 }
 .sf-menu.sf-horizontal > li:hover > ul,
@@ -100,7 +100,7 @@ li.sfHover > a > .sf-sub-indicator,
   padding: 3px 0;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-bottom: 3px;
 }
 .sf-menu a:focus,
