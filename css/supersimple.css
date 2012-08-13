@@ -120,10 +120,12 @@ li.sfHover > a > .sf-sub-indicator,
   margin: 0;
 }
 .sf-menu li li:hover a,
+.sf-menu li li a:hover,
+.sf-menu li li a:focus,
 .sf-menu.sf-vertical a {
   border-bottom: 0 none;
-  color: #fff;
-  background-color: #000;
+  color: #000;
+  background-color: #e8ff00;
   margin: 0;
 }
 .sf-menu a.sf-with-ul {
