@@ -16,7 +16,7 @@
           var output = '<ul class="rss-feed-items">';
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
-            output += '<li><a href="' + entry.link + '" title="' + entry.title + '">' + entry.title + '</a>';
+            output += '<li><a target="_blank" href="' + entry.link + '" title="' + entry.title + '">' + entry.title + '</a>';
             if (entry.author.length > 0) {
               output += ' - ' + entry.author;
             }
