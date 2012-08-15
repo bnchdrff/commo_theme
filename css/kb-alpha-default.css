@@ -1,1 +1,6 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+
+.front #block-system-main .panel-panel.grid-6 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
