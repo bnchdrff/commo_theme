@@ -6,13 +6,13 @@
   $( document ).ready( function() {
 
     function getRSS() {
-      var feed_url = $('.field-name-field-git-activity-rss- .field-item').text();
+      var feed_url = $('.field-name-git-commit-log-rss- .field-item a').attr('href');
       var feed = new google.feeds.Feed(feed_url);
       feed.setNumEntries(4); // specify number of entries to load
       feed.load(function(result) {
         if (!result.error) {
-          $('.field-name-field-git-activity-rss-').prepend('<div class="activity"><span>Activity</span></div>');
-          var container = $('.field-name-field-git-activity-rss-');
+          $('.field-name-git-commit-log-rss-').prepend('<div class="activity"><span>Activity</span></div>');
+          var container = $('.field-name-git-commit-log-rss-');
           var output = '<ul class="rss-feed-items">';
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
