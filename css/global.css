@@ -231,13 +231,15 @@ form .form-actions .form-submit:hover {
 }
 
 /* Main Content */
-.not-front #block-system-main .content img,
-.not-front #block-system-main .content {
+.not-front #zone-content .block .content img,
+.not-front #zone-content .block .content {
   max-width: 540px;
 }
-.not-front #block-system-main .content {
+.not-front #zone-content .block .node .content {
   margin-bottom: 20px;
 }
+.block-projects-block a:link,
+.block-projects-block a:visited,
 #block-system-main a:link,
 #block-system-main a:visited {
   color: #4d4d4d;
@@ -245,6 +247,8 @@ form .form-actions .form-submit:hover {
   font-size: 13px;
   font-family: AsapBold;
 }
+.block-projects-block a:focus,
+.block-projects-block a:hover,
 #block-system-main a:focus,
 #block-system-main a:hover {
   border-bottom: 3px solid #e8ff00;
@@ -729,10 +733,12 @@ form .form-actions .form-submit:hover {
   padding-bottom: 20px;
   border-bottom: 1px solid #ff739c;
 }
+.view-projects .project-title,
 .page-taxonomy-term #block-system-main .view-taxonomy-term .views-row .blog-post-title,
 .page-blog #block-system-main .view-blog .views-row .blog-post-title {
   margin-bottom: 0;
 }
+.view-projects .project-title a,
 .page-taxonomy-term #block-system-main .view-taxonomy-term .views-row .blog-post-title a,
 .page-blog #block-system-main .view-blog .views-row .blog-post-title a {
   font-size: 17px;
@@ -740,10 +746,10 @@ form .form-actions .form-submit:hover {
 }
 
 /* Login page */
-.page-user-login .tabs,
-.page-user-login .description,
-.page-user .tabs,
-.page-user .description {
+.page-user-login.not-logged-in .tabs,
+.page-user-login.not-logged-in .description,
+.page-user.not-logged-in .tabs,
+.page-user.not-logged-in .description {
   display: none;
 }
 
