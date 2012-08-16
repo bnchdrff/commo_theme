@@ -213,8 +213,11 @@ form .form-actions .form-submit:hover {
 #zone-preface-wrapper h1 {
   font-size: 36px;
   color: #fff;
-  margin: 0;
+  margin: 0 0 20px;
   line-height: 1;
+}
+#zone-preface-wrapper .boxes-box-controls {
+  display:none;
 }
 
 #section-content {
