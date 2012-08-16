@@ -196,6 +196,9 @@ form .form-actions .form-submit:hover {
   float: none;
   font-size: 20px;
 }
+.page-search #block-system-main .item-list .pager li.pager-current {
+  color: #000;
+}
 /* Preface (page title) */
 #zone-preface-wrapper {
   background-color: #000;
@@ -456,7 +459,7 @@ form .form-actions .form-submit:hover {
 #region-sidebar-second .block-feedback .boxes-box-content {
   background: transparent url(../images/blue_button_tri.png) no-repeat 10px 42px;
   padding-bottom: 20px;
-  width: 125px;
+  width: 117px;
 }
 #region-sidebar-second .block-bug .boxes-box-content.hover,
 #region-sidebar-second .block-feedback .boxes-box-content.hover {
@@ -492,7 +495,7 @@ form .form-actions .form-submit:hover {
 #region-sidebar-second .block-bug .boxes-box-content {
   background: transparent url(../images/purp_button_tri.png) no-repeat 10px 42px;
   padding-bottom: 20px;
-  width: 125px;
+  width: 90px;
 }
 
 /* Footer */
@@ -635,11 +638,26 @@ form .form-actions .form-submit:hover {
 .front #zone-content-wrapper .pane-content h2 a.over {
   border-bottom: 3px solid #E8FF00;
 }
-.front #zone-content-wrapper .pane-1 a.over img {
-  background: url(../images/get_started_drop.png) no-repeat left top;
+.front #zone-content-wrapper .pane-content a.circ {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 260px;
+  height: 260px;
+  text-indent: -9999px;
+  display:block;
 }
-.front #zone-content-wrapper .pane-2 a.over img {
-  background: url(../images/get_involved_drop.png) no-repeat left top;
+.front #zone-content-wrapper .pane-1 a.circ.over {
+  background-image: url(../images/get_started_drop.png);
+}
+.front #zone-content-wrapper .pane-2 a.circ.over {
+  background-image: url(../images/get_involved_drop.png);
+}
+.front #zone-content-wrapper .pane-1 a.circ {
+  background: transparent url(../images/get_started.png) no-repeat center center;
+}
+.front #zone-content-wrapper .pane-2 a.circ {
+  background: transparent url(../images/get_involved.png) no-repeat center center;
 }
 .front #zone-content-wrapper .pane-content a.circ:focus,
 .front #zone-content-wrapper .pane-content a.circ:hover {
@@ -678,6 +696,7 @@ form .form-actions .form-submit:hover {
 .front #zone-postscript-wrapper .view-blog h3 {
   margin-bottom: 0;
 }
+#block-system-main .field-name-date-author,
 .view-taxonomy-term .author-date,
 .view-blog .author-date {
   font-family: AsapItalic;
