@@ -44,20 +44,16 @@
 
     // this could be done better....
     $('.front #zone-content .pane-2 a').mouseover(function() { 
-      $('#zone-content .pane-2 a').toggleClass('over');
       $('.comm-intro').hide();
       $('.get-started').show();
     }).mouseout(function() {
-      $('#zone-content .pane-2 a').toggleClass('over');
       $('.get-started').hide();
       $('.comm-intro').show();
     });
     $('.front #zone-content .pane-1 a').mouseover(function() { 
-      $('#zone-content .pane-1 a').toggleClass('over');
       $('.comm-intro').hide();
       $('.get-involved').show();
     }).mouseout(function() {
-      $('#zone-content .pane-1 a').toggleClass('over');
       $('.get-involved').hide();
       $('.comm-intro').show();
     });

@@ -629,13 +629,17 @@ form .form-actions .form-submit:hover {
 }
 .front #zone-content-wrapper .pane-content {
   text-align: center;
-  margin-top: -40px;
+  margin-top: -60px;
 }
-.front #zone-content-wrapper .pane-content h2 a {
+.front #zone-content-wrapper .pane-content a h2 {
   font-size: 36px;
   padding: 20px 0 0;
+  display: inline-block;
+  position: relative;
+  top: 240px;
+  line-height: 1;
 }
-.front #zone-content-wrapper .pane-content h2 a.over {
+.front #zone-content-wrapper .pane-content a:hover h2 {
   border-bottom: 3px solid #E8FF00;
 }
 .front #zone-content-wrapper .pane-content a.circ {
@@ -643,20 +647,19 @@ form .form-actions .form-submit:hover {
   margin-left: auto;
   margin-right: auto;
   width: 260px;
-  height: 260px;
-  text-indent: -9999px;
+  height: 300px;
   display:block;
 }
-.front #zone-content-wrapper .pane-1 a.circ.over {
+.front #zone-content-wrapper .pane-1 a:hover {
   background-image: url(../images/get_started_drop.png);
 }
-.front #zone-content-wrapper .pane-2 a.circ.over {
+.front #zone-content-wrapper .pane-2 a:hover {
   background-image: url(../images/get_involved_drop.png);
 }
-.front #zone-content-wrapper .pane-1 a.circ {
+.front #zone-content-wrapper .pane-1 a {
   background: transparent url(../images/get_started.png) no-repeat center center;
 }
-.front #zone-content-wrapper .pane-2 a.circ {
+.front #zone-content-wrapper .pane-2 a {
   background: transparent url(../images/get_involved.png) no-repeat center center;
 }
 .front #zone-content-wrapper .pane-content a.circ:focus,
