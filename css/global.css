@@ -199,6 +199,25 @@ form .form-actions .form-submit:hover {
 .page-search #block-system-main .item-list .pager li.pager-current {
   color: #000;
 }
+/* Search Issues block */
+.block-search-chili .boxes-box-content {
+  background: #000 url(../images/tri_yellow.png) no-repeat 150px center;
+  width: 160px;
+  padding-right: 20px;
+}
+.block-search-chili .boxes-box-content a:link,
+.block-search-chili .boxes-box-content a:visited {
+  color: #E8FF00;
+  font-size: 15px;
+  padding: 10px;
+  text-decoration: none;
+  display:block;
+  width: 100%;
+}
+.block-search-chili .boxes-box-content a:hover,
+.block-search-chili .boxes-box-content a:focus {
+}
+
 /* Preface (page title) */
 #zone-preface-wrapper {
   background-color: #000;
@@ -638,6 +657,7 @@ form .form-actions .form-submit:hover {
   position: relative;
   top: 240px;
   line-height: 1;
+  margin-left: -15px;
 }
 .front #zone-content-wrapper .pane-content a:hover h2 {
   border-bottom: 3px solid #E8FF00;
@@ -782,3 +802,4 @@ form .form-actions .form-submit:hover {
 .node-type-project-page .field-label {
   text-transform: uppercase;
 }
+

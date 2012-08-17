@@ -5,6 +5,14 @@
 
   $( document ).ready( function() {
 
+    $('body').bind('responsivelayout', function(ev, toFro) {
+      console.log(toFro);
+      if(toFro.to != 'mobile') {
+        var src = $('.logo-img').attr('src');
+        $('.logo-img').attr('src', src.replace('Commotion_logo_mo.png', 'commotion_kbabout_measure-03.png'));
+      }
+    });
+
     function getRSS() {
       var feed_url =
       'https://code.commotionwireless.net/activity.atom?key=e43fd10eb7855d7011ba8375f64d60e031036342';
