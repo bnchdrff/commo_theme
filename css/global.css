@@ -38,6 +38,7 @@ form .form-actions .form-submit {
 }
 #block-system-main .node-book .links a:focus,
 #block-system-main .node-book .links a:hover,
+form .form-actions .form-submit:focus,
 form .form-actions .form-submit:hover {
   background: #000;
   color: #fff;
@@ -85,6 +86,13 @@ form .form-actions .form-submit:hover {
 #region-branding .logo-img img {
   position: relative;
   z-index: 99;
+  display: none;
+}
+#region-branding .logo-img {
+  width: 250px;
+}
+.responsive-layout-mobile #region-branding .logo-img {
+  width: 105px;
 }
 
 /* Menu */
@@ -342,6 +350,7 @@ form .form-actions .form-submit:hover {
   color: #ff739c;
   font-family: AsapRegular;
 }
+#block-system-main .book-navigation .page-links a:focus,
 #block-system-main .book-navigation .page-links a:hover {
   border-bottom: 0 none;
 }
@@ -659,6 +668,7 @@ form .form-actions .form-submit:hover {
   line-height: 1;
   margin-left: -15px;
 }
+.front #zone-content-wrapper .pane-content a:focus h2,
 .front #zone-content-wrapper .pane-content a:hover h2 {
   border-bottom: 3px solid #E8FF00;
 }
@@ -670,9 +680,11 @@ form .form-actions .form-submit:hover {
   height: 300px;
   display:block;
 }
+.front #zone-content-wrapper .pane-1 a:focus,
 .front #zone-content-wrapper .pane-1 a:hover {
   background-image: url(../images/get_started_drop.png);
 }
+.front #zone-content-wrapper .pane-2 a:focus,
 .front #zone-content-wrapper .pane-2 a:hover {
   background-image: url(../images/get_involved_drop.png);
 }

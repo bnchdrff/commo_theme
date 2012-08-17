@@ -6,11 +6,14 @@
   $( document ).ready( function() {
 
     $('body').bind('responsivelayout', function(ev, toFro) {
-      console.log(toFro);
-      if(toFro.to != 'mobile') {
-        var src = $('.logo-img').attr('src');
-        $('.logo-img').attr('src', src.replace('Commotion_logo_mo.png', 'commotion_kbabout_measure-03.png'));
+      if (toFro.from == 'mobile' || (toFro.to != 'mobile' && toFro.from === undefined)) {
+        var src = $('.logo-img img').attr('src');
+        $('.logo-img img').attr('src', src.replace('Commotion_logo_mo.png', 'commotion_kbabout_measure-03.png'));
+      } else if (toFro.to == 'mobile') {
+        var src = $('.logo-img img').attr('src');
+        $('.logo-img img').attr('src', src.replace('commotion_kbabout_measure-03.png', 'Commotion_logo_mo.png'));
       }
+      $('.logo-img img').fadeIn();
     });
 
     function getRSS() {
