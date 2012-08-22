@@ -414,6 +414,9 @@ form .form-actions .form-submit:hover {
 }
 
 /* Sidebar menus */
+#region-sidebar-second .block-wiki-listing-block .block-title a:link,
+#region-sidebar-second .block-wiki-listing-block .block-title a:visited,
+#region-sidebar-second .block-wiki-listing-block .block-title,
 #region-sidebar-second .block-menu-block .block-title a:link,
 #region-sidebar-second .block-menu-block .block-title a:visited,
 #region-sidebar-second .block-menu-block .block-title {
@@ -426,10 +429,12 @@ form .form-actions .form-submit:hover {
   padding: 0;
   margin: 0;
 }
+#region-sidebar-second .block-wiki-listing-block .block-title,
 #region-sidebar-second .block-menu-block .block-title {
   padding: 10px;
 }
 
+#region-sidebar-second .block-wiki-listing-block .view-content,
 #region-sidebar-second .block ul.menu {
   padding-bottom: 10px;
 }
@@ -821,3 +826,33 @@ form .form-actions .form-submit:hover {
   text-transform: uppercase;
 }
 
+/* Wiki intro box */
+.block-wiki-intro {
+  background-color: #ff739c;
+  color: #000;
+}
+.block-wiki-intro .block-inner {
+  padding: 10px;
+}
+.block-wiki-intro .block-title {
+  border-bottom: 1px solid #000;
+  font-size: 15px;
+}
+.block-wiki-intro .boxes-box-content {
+  padding-top: 10px;
+}
+.block-wiki-intro .boxes-box-content p {
+  margin-bottom: 0;
+}
+.block-wiki-intro .boxes-box-content a:link,
+.block-wiki-intro .boxes-box-content a:visited {
+  color: #000;
+  text-decoration: none;
+  font-family: AsapBold;
+}
+.block-wiki-intro .boxes-box-content a:hover,
+.block-wiki-intro .boxes-box-content a:focus {
+  background-color: #000;
+  color: #fff;
+  display:inline-block;
+}
