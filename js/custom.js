@@ -5,13 +5,27 @@
 
   $( document ).ready( function() {
 
+    // Responsive adjustments
     $('body').bind('responsivelayout', function(ev, toFro) {
       if (toFro.from == 'mobile' || (toFro.to != 'mobile' && toFro.from === undefined)) {
+        // larger than mobile
         var src = $('.logo-img img').attr('src');
         $('.logo-img img').attr('src', src.replace('Commotion_logo_mo.png', 'commotion_kbabout_measure-03.png'));
+        if (!$('.region-menu .main-menu').hasClass('sf-menu')) {
+          $('.region-menu .main-menu').addClass('sf-menu').addClass('sf-js-enabled').removeClass('menu-mobile');
+          $('ul.sf-menu').superfish();
+        }
       } else if (toFro.to == 'mobile') {
+        // mobile version
         var src = $('.logo-img img').attr('src');
         $('.logo-img img').attr('src', src.replace('commotion_kbabout_measure-03.png', 'Commotion_logo_mo.png'));
+        if ($('.region-menu .main-menu').hasClass('sf-menu')) {
+          $('.region-menu .main-menu').removeClass('sf-menu').removeClass('sf-js-enabled');
+          $('.region-menu .main-menu').unbind().addClass('menu-mobile');
+          $('.region-menu .main-menu li').unbind();
+          $('.region-menu .main-menu ul').unbind();
+          $('.region-menu .main-menu li ul').removeAttr('style');
+        }
       }
       $('.logo-img img').fadeIn();
     });
@@ -46,6 +60,7 @@
       google.setOnLoadCallback(getRSS);
     }
 
+    // feedback & report buttons hover
     $('#boxes-box-feedback a').hover( function() {
       $('#boxes-box-feedback .boxes-box-content').toggleClass('hover');
     });
@@ -53,7 +68,7 @@
       $('#boxes-box-bug .boxes-box-content').toggleClass('hover');
     });
 
-    // this could be done better....
+    // front page hover
     $('.front #zone-content .pane-2 a').mouseover(function() { 
       $('.comm-intro').hide();
       $('.get-started').show();

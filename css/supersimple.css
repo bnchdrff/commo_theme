@@ -93,8 +93,11 @@ li.sfHover > a > .sf-sub-indicator,
 .sf-menu.sf-navbar li li.sfHover > ul {
   top: 38px;
 }
-.sf-menu a,
-.sf-menu a:visited  {
+.main-menu  {
+  list-style: none;
+}
+.main-menu a,
+.main-menu a:visited  {
   color: #000;
   font: normal 13px AsapRegular, Sans-serif;
   padding: 3px 0;
@@ -103,11 +106,11 @@ li.sfHover > a > .sf-sub-indicator,
   margin-right: 20px;
   margin-bottom: 3px;
 }
-.sf-menu a:focus,
-.sf-menu a:hover,
-.sf-menu a:active,
-.sf-menu li:hover > a,
-.sf-menu li.sfHover > a {
+.main-menu a:focus,
+.main-menu a:hover,
+.main-menu a:active,
+.main-menu li:hover > a,
+.main-menu li.sfHover > a {
   border-bottom: 3px solid #e8ff00;
   margin-bottom: 0;
 }
@@ -210,4 +213,24 @@ li.sfHover > a > .sf-sub-indicator,
 }
 .sf-menu li.sf-parent-children-10 ul.sf-megamenu {
   width: 120em;
+}
+
+/* mobile version */
+.menu-mobile .sf-hidden {
+  display: none;
+}
+.menu-mobile a:focus .sf-sub-indicator,
+.menu-mobile a:hover .sf-sub-indicator,
+.menu-mobile li:hover > a > .sf-sub-indicator,
+.menu-mobile li.sfHover > a > .sf-sub-indicator,
+.menu-mobile a:hover > .sf-sub-indicator,
+.menu-mobile a > .sf-sub-indicator {
+  background: none;
+}
+
+.menu-mobile ul {
+  margin-left: 20px;
+}
+.menu-mobile li {
+  margin-bottom: 5px;
 }
