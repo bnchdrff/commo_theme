@@ -735,6 +735,8 @@ form .form-actions .form-submit:hover {
 .view-taxonomy-term .author-date,
 .view-blog .author-date {
   font-family: AsapItalic;
+  padding-bottom: 10px;
+  display: block;
 }
 #zone-postscript-wrapper .view-blog .read-more a:link, 
 #zone-postscript-wrapper .view-blog .read-more a:visited,
@@ -800,6 +802,10 @@ form .form-actions .form-submit:hover {
 .page-blog #block-system-main .view-blog .views-row .blog-post-title a {
   font-size: 17px;
   text-transform: uppercase;
+}
+.page-taxonomy-term #block-system-main .view-taxonomy-term .views-row .blog-post-image,
+.page-blog #block-system-main .view-blog .views-row .blog-post-image {
+  padding: 10px 0;
 }
 
 /* Login page */
