@@ -316,8 +316,15 @@ form .form-actions .form-submit:hover {
   padding: 0;
 }
 #block-system-main ul ol, 
+#block-system-main ol ol, 
+#block-system-main ul ul, 
 #block-system-main ol ul {
   margin: 0;
+  padding: 0 0 0 20px;
+}
+#block-system-main ul ul, 
+#block-system-main ol ul {
+  list-style-type: circle;
 }
 #block-system-main hr {
   max-width: 460px;
