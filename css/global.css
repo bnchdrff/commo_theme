@@ -19,6 +19,7 @@ form .form-item .form-text {
 form .form-item label {
   text-transform: uppercase;
 }
+.toboggan-unified #login-links a.login-link,
 #block-system-main .node-book .links a,
 form .form-actions .form-submit {
   background: #E8FF00;
@@ -36,13 +37,15 @@ form .form-actions .form-submit {
   font-weight: normal;
   padding: 5px 4px 4px;
 }
+.toboggan-unified #login-links a.login-link:focus,
+.toboggan-unified #login-links a.login-link:hover,
 #block-system-main .node-book .links a:focus,
 #block-system-main .node-book .links a:hover,
 form .form-actions .form-submit:focus,
 form .form-actions .form-submit:hover {
   background: #000;
   color: #fff;
-  border-bottom: 0 none;
+  border: 0 none;
 }
 
 /* Top Color bar */
@@ -217,10 +220,10 @@ form .form-actions .form-submit:hover {
 .block-search-chili .boxes-box-content a:visited {
   color: #E8FF00;
   font-size: 15px;
-  padding: 10px;
+  padding: 10px 35px 10px 10px;
   text-decoration: none;
   display:block;
-  width: 100%;
+  width: 135px;
 }
 .block-search-chili .boxes-box-content a:hover,
 .block-search-chili .boxes-box-content a:focus {
@@ -325,6 +328,9 @@ form .form-actions .form-submit:hover {
 #block-system-main ul ul, 
 #block-system-main ol ul {
   list-style-type: circle;
+}
+#block-system-main .vertical-tabs-list {
+  padding-left: 0;
 }
 #block-system-main hr {
   max-width: 460px;
@@ -825,11 +831,17 @@ form .form-actions .form-submit:hover {
 }
 
 /* Login page */
-.page-user-login.not-logged-in .tabs,
-.page-user-login.not-logged-in .description,
-.page-user.not-logged-in .tabs,
-.page-user.not-logged-in .description {
+.toboggan-unified .tabs,
+.toboggan-unified .description,
+.toboggan-unified .tabs,
+.toboggan-unified #login-message,
+.toboggan-unified .description {
   display: none;
+}
+
+.toboggan-unified .password-strength,
+.toboggan-unified .password-confirm {
+  width: 150px;
 }
 
 /* Project Pages */
@@ -837,33 +849,33 @@ form .form-actions .form-submit:hover {
   text-transform: uppercase;
 }
 
-/* Wiki intro box */
-.block-wiki-intro {
+/* Wiki intro box (Pink block) */
+.pink-block {
   background-color: #ff739c;
   color: #000;
 }
-.block-wiki-intro .block-inner {
+.pink-block .block-inner {
   padding: 10px;
 }
-.block-wiki-intro .block-title {
+.pink-block .block-title {
   border-bottom: 1px solid #000;
   font-size: 15px;
 }
-.block-wiki-intro .boxes-box-content {
+.pink-block .boxes-box-content {
   padding-top: 10px;
 }
-.block-wiki-intro .boxes-box-content p {
+.pink-block .boxes-box-content p {
   margin-bottom: 0;
 }
-.block-wiki-intro .boxes-box-content a:link,
-.block-wiki-intro .boxes-box-content a:visited {
+.pink-block .boxes-box-content a:link,
+.pink-block .boxes-box-content a:visited {
   text-decoration: none;
   background-color: #000;
   color: #fff;
   padding: 3px 2px;
 }
-.block-wiki-intro .boxes-box-content a:hover,
-.block-wiki-intro .boxes-box-content a:focus {
+.pink-block .boxes-box-content a:hover,
+.pink-block .boxes-box-content a:focus {
   color: #000;
   background-color: transparent;
 }
