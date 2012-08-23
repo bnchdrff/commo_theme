@@ -158,6 +158,9 @@ li.sfHover > a > .sf-sub-indicator,
 .sf-menu.sf-navbar li > ul > li {
   border: 0 none;
 }
+.sf-menu li > ul > li.first a {
+  padding-top: 7px;
+}
 .sf-menu.sf-navbar li > ul > li.first,
 .sf-menu.sf-navbar.rtl li > ul > li.last {
 }
@@ -216,6 +219,9 @@ li.sfHover > a > .sf-sub-indicator,
 }
 
 /* mobile version */
+.menu-mobile {
+  margin: 20px 0 0;
+}
 .menu-mobile .sf-hidden {
   display: none;
 }
@@ -232,5 +238,8 @@ li.sfHover > a > .sf-sub-indicator,
   margin-left: 20px;
 }
 .menu-mobile li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+}
+.menu-mobile li.last {
+  margin-bottom: 0;
 }

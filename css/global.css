@@ -152,10 +152,10 @@ form .form-actions .form-submit:hover {
 .page-search #block-system-main .search-results .search-info {
   display:none;
 }
-.page-search #block-system-main .item-list,
-.page-search #block-system-main .item-list .pager li, 
-.page-search #block-system-main .item-list .pager li a,
-.page-search #block-system-main .item-list .pager {
+#block-system-main .item-list,
+#block-system-main .item-list .pager li, 
+#block-system-main .item-list .pager li a,
+#block-system-main .item-list .pager {
   border: 0 none;
   background: transparent;
   border-radius: 0;
@@ -167,44 +167,44 @@ form .form-actions .form-submit:hover {
   position: relative;
   text-align: center;
 }
-.page-search #block-system-main .item-list .pager li a:link,
-.page-search #block-system-main .item-list .pager li a:visited {
+#block-system-main .item-list .pager li a:link,
+#block-system-main .item-list .pager li a:visited {
   color: #ff739c;
   margin-bottom: 3px;
 }
-.page-search #block-system-main .item-list .pager li.pager-first,
-.page-search #block-system-main .item-list .pager li.pager-previous {
+#block-system-main .item-list .pager li.pager-first,
+#block-system-main .item-list .pager li.pager-previous {
   float: left;
 }
-.page-search #block-system-main .item-list .pager li.pager-first {
+#block-system-main .item-list .pager li.pager-first {
   background: transparent url(../images/arrow_pink_left_double.png) no-repeat 1px 6px;
 }
-.page-search #block-system-main .item-list .pager li.pager-previous a {
+#block-system-main .item-list .pager li.pager-previous a {
   width: 70px;
   background: transparent url(../images/arrow_pink_left.png) no-repeat 8px 6px;
   padding-left: 5px;
 }
-.page-search #block-system-main .item-list .pager li.pager-next,
-.page-search #block-system-main .item-list .pager li.pager-last {
+#block-system-main .item-list .pager li.pager-next,
+#block-system-main .item-list .pager li.pager-last {
   float: right;
   right: 0;
 }
-.page-search #block-system-main .item-list .pager li.pager-next {
+#block-system-main .item-list .pager li.pager-next {
   background: transparent url(../images/arrow_pink_right.png) no-repeat right 6px;
 }
-.page-search #block-system-main .item-list .pager li.pager-last {
+#block-system-main .item-list .pager li.pager-last {
   background: transparent url(../images/arrow_pink_right_double.png) no-repeat right 6px;
 }
-.page-search #block-system-main .item-list .pager li.pager-current,
-.page-search #block-system-main .item-list .pager li.pager-item a,
-.page-search #block-system-main .item-list .pager li.pager-item {
+#block-system-main .item-list .pager li.pager-current,
+#block-system-main .item-list .pager li.pager-item a,
+#block-system-main .item-list .pager li.pager-item {
   margin-left:auto;
   margin-right:auto;
   text-align:center;
   float: none;
   font-size: 20px;
 }
-.page-search #block-system-main .item-list .pager li.pager-current {
+#block-system-main .item-list .pager li.pager-current {
   color: #000;
 }
 /* Search Issues block */
@@ -406,6 +406,7 @@ form .form-actions .form-submit:hover {
 #block-system-main .field-name-git-commit-log-rss- ul.rss-feed-items {
   clear: both;
   margin-left: 10px;
+  margin-right: 20px;
 }
 .block-recent-activity ul.rss-feed-items li,
 #block-system-main .field-name-git-commit-log-rss- ul.rss-feed-items li {
@@ -496,6 +497,9 @@ form .form-actions .form-submit:hover {
 }
 
 /* Sidebar feedback button */
+#region-sidebar-second .block-feedback {
+  margin-bottom: 0;
+}
 #region-sidebar-second .block-feedback .boxes-box-content {
   background: transparent url(../images/blue_button_tri.png) no-repeat 10px 42px;
   padding-bottom: 20px;
