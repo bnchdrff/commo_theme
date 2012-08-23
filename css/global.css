@@ -846,13 +846,13 @@ form .form-actions .form-submit:hover {
 }
 .block-wiki-intro .boxes-box-content a:link,
 .block-wiki-intro .boxes-box-content a:visited {
-  color: #000;
   text-decoration: none;
-  font-family: AsapBold;
+  background-color: #000;
+  color: #fff;
+  padding: 3px 2px;
 }
 .block-wiki-intro .boxes-box-content a:hover,
 .block-wiki-intro .boxes-box-content a:focus {
-  background-color: #000;
-  color: #fff;
-  display:inline-block;
+  color: #000;
+  background-color: transparent;
 }
