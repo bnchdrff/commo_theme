@@ -20,6 +20,7 @@ form .form-item label {
   text-transform: uppercase;
 }
 .toboggan-unified #login-links a.login-link,
+#zone-content .tabs a,
 #block-system-main .node-book .links a,
 form .form-actions .form-submit {
   background: #E8FF00;
@@ -39,6 +40,8 @@ form .form-actions .form-submit {
 }
 .toboggan-unified #login-links a.login-link:focus,
 .toboggan-unified #login-links a.login-link:hover,
+#zone-content .tabs a:focus,
+#zone-content .tabs a:hover,
 #block-system-main .node-book .links a:focus,
 #block-system-main .node-book .links a:hover,
 form .form-actions .form-submit:focus,
@@ -47,6 +50,12 @@ form .form-actions .form-submit:hover {
   color: #fff;
   border: 0 none;
 }
+#zone-content .tabs {
+  margin: 0 0 10px;
+  padding: 0;
+  border: 0 none;
+}
+
 
 /* Top Color bar */
 #zone-user,
@@ -335,6 +344,9 @@ form .form-actions .form-submit:hover {
 #block-system-main hr {
   max-width: 460px;
   background-color: #ff739c;
+}
+#block-system-main ins {
+  text-decoration: underline;
 }
 #block-system-main h2.node-title a:visited,
 #block-system-main h2.node-title a:link,
@@ -843,6 +855,9 @@ form .form-actions .form-submit:hover {
 .toboggan-unified .password-confirm {
   width: 150px;
 }
+.toboggan-unified .password-parent {
+  margin-bottom: 10px;
+}
 
 /* Project Pages */
 .node-type-project-page .field-label {
@@ -878,4 +893,25 @@ form .form-actions .form-submit:hover {
 .pink-block .boxes-box-content a:focus {
   color: #000;
   background-color: transparent;
+}
+
+/* Messages box */
+#messages {
+  margin-bottom: 20px;
+}
+#messages .messages.status {
+  background: #00FFCF url(../images/good_job.png) no-repeat 20px center;
+  border: 0 none;
+  color: #000;
+  font-size: 12px;
+}
+#messages .messages.error {
+  background-color: #ff739c;
+  background-position: 10px center;
+  border: 0 none;
+}
+#messages .messages,
+#messages .messages h2 {
+  color: #000;
+  font-size: 12px;
 }
