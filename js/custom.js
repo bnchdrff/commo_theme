@@ -69,14 +69,14 @@
     });
 
     // front page hover
-    $('.front #zone-content .pane-2 a').mouseover(function() { 
+    $('.front #zone-content .pane-1 a').mouseover(function() { 
       $('.comm-intro').hide();
       $('.get-started').show();
     }).mouseout(function() {
       $('.get-started').hide();
       $('.comm-intro').show();
     });
-    $('.front #zone-content .pane-1 a').mouseover(function() { 
+    $('.front #zone-content .pane-2 a').mouseover(function() { 
       $('.comm-intro').hide();
       $('.get-involved').show();
     }).mouseout(function() {
