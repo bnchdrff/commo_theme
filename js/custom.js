@@ -30,6 +30,11 @@
       $('.logo-img img').fadeIn();
     });
 
+    $(window).resize(function() {
+      var intro_height = $('.comm-intro').height();
+      $('.equal-height-container').height(intro_height + 20);
+    });
+
     function getRSS() {
       var feed_url =
       'https://code.commotionwireless.net/activity.atom?key=e43fd10eb7855d7011ba8375f64d60e031036342';
@@ -83,7 +88,6 @@
       $('.get-involved').hide();
       $('.comm-intro').show();
     });
-
 
   })
 

@@ -680,12 +680,6 @@ form .form-actions .form-submit:hover {
   max-width: 460px;
   margin: 0 auto 20px;
 }
-.front.responsive-layout-mobile .panel-panel.grid-6 {
-  width: 50%;
-  margin-left: 0;
-  margin-right: 0;
-  float: left;
-}
 .front #zone-content-wrapper #zone-content {
   padding-top: 0;
 }
@@ -732,6 +726,27 @@ form .form-actions .form-submit:hover {
 .front #zone-content-wrapper .pane-content a.circ:hover {
   border: 0 none;
 }
+.front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 {
+  margin: 0 0 20px 0;
+  width: 50%;
+  float: left;
+}
+.front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 a.circ {
+  width: 100%;
+}
+.front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 .pane-1 a {
+  background-image: url(../images/get_started_mo.png);
+}
+.front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 .pane-2 a {
+  background-image: url(../images/get_involved_mo.png);
+}
+.front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 .pane-content {
+}
+.front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 .pane-content h2 {
+  top: 200px;
+  width: 140px;
+}
+
 .front #zone-branding-wrapper {
   background: black url(../images/white_tri.png) no-repeat top center;
   height: 80px;
