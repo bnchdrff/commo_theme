@@ -930,3 +930,7 @@ form .form-actions .form-submit:hover {
   color: #000;
   font-size: 12px;
 }
+
+.captcha .fieldset-description {
+  width: 300px;
+}
