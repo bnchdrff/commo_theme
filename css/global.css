@@ -708,19 +708,25 @@ form .form-actions .form-submit:hover {
   height: 300px;
   display:block;
 }
-.front #zone-content-wrapper .pane-1 a:focus,
+/*.front #zone-content-wrapper .pane-1 a:focus,
 .front #zone-content-wrapper .pane-1 a:hover {
   background-image: url(../images/get_started_drop.png);
 }
 .front #zone-content-wrapper .pane-2 a:focus,
 .front #zone-content-wrapper .pane-2 a:hover {
   background-image: url(../images/get_involved_drop.png);
+}*/
+.front #zone-content-wrapper .pane-1 a:focus,
+.front #zone-content-wrapper .pane-1 a:hover,
+.front #zone-content-wrapper .pane-2 a:focus,
+.front #zone-content-wrapper .pane-2 a:hover {
+  background-position: -250px center;
 }
 .front #zone-content-wrapper .pane-1 a {
-  background: transparent url(../images/get_started.png) no-repeat center center;
+  background: url(../images/get_started_sprite.png) transparent no-repeat 10px center;
 }
 .front #zone-content-wrapper .pane-2 a {
-  background: transparent url(../images/get_involved.png) no-repeat center center;
+  background: url(../images/get_involved_sprite.png) transparent no-repeat 10px center;
 }
 .front #zone-content-wrapper .pane-content a.circ:focus,
 .front #zone-content-wrapper .pane-content a.circ:hover {
