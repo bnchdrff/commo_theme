@@ -89,6 +89,11 @@
       $('.comm-intro').show();
     });
 
+    // Download page source code button
+    $('#openwrt-source-btn').click(function() {
+      $('#openwrt-source').slideToggle();
+    });
+    
   })
 
 })(jQuery);

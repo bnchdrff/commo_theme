@@ -945,6 +945,101 @@ form .form-actions .form-submit:hover {
 .captcha .fieldset-description {
   width: 300px;
 }
+
+/* Download Page */
+.button {
+  background:#00FFCF;
+  padding:12px 20px;
+  border-radius:10px;
+}
+
+.context-new-download #zone-content .block .content {
+  max-width:none;
+}
+
+.context-new-download thead th {
+  text-align:center;
+}
+
+.context-new-download th {
+  font-weight:bold;
+}
+
+.context-new-download th a {
+  display:inline;
+}
+
+.context-new-download td {
+  text-align:center;
+}
+
+.context-new-download td.filename {
+  text-align:left;
+}
+
+#openwrt-source {
+  display:none;
+}
+
+.git-box {
+  background:#000000;
+  color:#FFFFFF;
+  max-width:540px;
+}
+
+.git-box h3 {
+  border-bottom:1px solid #FF739C;
+  color:#FF739C;
+  padding:10px;
+}
+
+.git-box .git_url_box {
+  height:75px;
+  margin-left:10px;
+}
+
+.git-box .git_url_list {
+  padding-left:0 !important;
+}
+
+.git-box ul li {
+  float:left;
+  height:23px;
+  list-style-image:none;
+  list-style-type:none;
+  margin:0;
+  padding:0 !important;
+}
+
+.git-box li a {
+  background:-moz-linear-gradient(center top , #F8F8F8, #DDDDDD) repeat scroll 0 0 transparent;
+  border:1px solid #BBBBBB;
+  padding:0 10px 0 11px;
+  display:block;
+  color:#333333;
+}
+
+#block-system-main .git-box ul.git_url_list li a.selected {
+  background:-moz-linear-gradient(center top , #CCCCCC, #AAAAAA) repeat scroll 0 0 transparent;
+  color:#000000;
+  border:1px solid #BBBBBB;
+}
+
+#block-system-main .git-box ul li a:hover, .git-box ul li a:focus {
+  background:#E8FF00;
+  color:#000000;
+  border:1px solid #E8FF00;
+}
+
+.git-box .git_url_text {
+  width:90%;
+  background-color:#FFFFFF;
+}
+
+.git-box .git_url_desc {
+  float:left;
+}
+
 .syntaxhighlighter .gutter .line {
   border-right: 3px solid #877AED !important;
 }
