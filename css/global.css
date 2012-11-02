@@ -306,6 +306,11 @@ form .form-actions .form-submit:hover {
   padding-left: 20px;
   padding-right: 20px;
 }
+#block-system-main pre {
+  font: normal 13px/16px monospace;
+  padding-left: 30px;
+  border-left: 5px solid #877AED;
+}
 
 #block-system-main p.bigger,
 #block-system-main p.bigger a {
@@ -939,4 +944,7 @@ form .form-actions .form-submit:hover {
 
 .captcha .fieldset-description {
   width: 300px;
+}
+.syntaxhighlighter .gutter .line {
+  border-right: 3px solid #877AED !important;
 }
