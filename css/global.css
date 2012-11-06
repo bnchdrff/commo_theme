@@ -1043,3 +1043,56 @@ form .form-actions .form-submit:hover {
 .syntaxhighlighter .gutter .line {
   border-right: 3px solid #877AED !important;
 }
+
+/* Get Started */
+.not-front.page-get-started-test #block-system-main .block-inner .content {
+  width: 100%;
+  max-width: 100%;
+}
+.view-get-started .frame {
+  height: 725px;
+  border-top: 1px solid #c3c;
+  background-repeat:no-repeat;
+  width: 100%;
+}
+.view-get-started .frame h2.frame-title {
+  margin-top: 500px;
+  margin-left: 600px;
+}
+.view-get-started .frame-desc {
+  margin-left: 600px;
+}
+.view-get-started .hidden {
+  display: none;
+}
+.view-get-started .attachment-before {
+  position: absolute;
+  top: 0;
+}
+.view-get-started .attachment-before .view-display-id-attachment_1 {
+  margin-top: 50px;
+  margin-left: 40px;
+}
+.view-get-started .attachment-before.fixed {
+  position: fixed;
+  top: 200px;
+}
+.view-get-started .attachment-before .frame-button {
+  margin-bottom: 10px;
+}
+.view-get-started .attachment-before .frame-button a {
+  display:block;
+  overflow: hidden;
+  width: 15px;
+  height: 15px;
+  border: 0;
+  font-size: 18px;
+  color: #000;
+}
+.view-get-started .attachment-before .frame-button a:focus,
+.view-get-started .attachment-before .frame-button a:hover {
+  border: 0 !important;
+}
+.view-get-started .attachment-before .frame-button-title {
+  margin-left: 10px;
+}

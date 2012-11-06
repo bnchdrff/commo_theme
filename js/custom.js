@@ -15,6 +15,11 @@
           $('.region-menu .main-menu').addClass('sf-menu').addClass('sf-js-enabled').removeClass('menu-mobile');
           $('ul.sf-menu').superfish();
         }
+        // Load background images on Get Started
+        $('.frame').each( function(i) {
+          var bg_big = 'url(' + $(this).find('.full-background-url').text() + ')';
+          $(this).css('background-image', bg_big);
+        });
       } else if (toFro.to == 'mobile') {
         // mobile version
         var src = $('.logo-img img').attr('src');
@@ -74,14 +79,14 @@
     });
 
     // front page hover
-    $('.front #zone-content .pane-1 a').mouseover(function() { 
+    $('.front #zone-content .pane-1 a').mouseover(function() {
       $('.comm-intro').hide();
       $('.get-started').show();
     }).mouseout(function() {
       $('.get-started').hide();
       $('.comm-intro').show();
     });
-    $('.front #zone-content .pane-2 a').mouseover(function() { 
+    $('.front #zone-content .pane-2 a').mouseover(function() {
       $('.comm-intro').hide();
       $('.get-involved').show();
     }).mouseout(function() {
@@ -89,11 +94,47 @@
       $('.comm-intro').show();
     });
 
+    // Get Started
+    $('.view-get-started .attachment .frame-button a').hover(function() {
+      $(this).stop().animate({width: '100%'});
+    }, function() {
+      $(this).delay('800').animate({width: '15px'});
+    });
+
+    $('.view-get-started .attachment .frame-button a').bind('click', function(event){
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500,'easeInOutExpo');
+        event.preventDefault();
+    });
+    $.fn.fixer = function(pos) {
+       $fixed = $(this),
+       fixedTop = $fixed.position().top,
+       fixedHeight = $fixed.height(),
+       $footer = $("#section-footer"),
+       footerTop = $footer.position().top - pos,
+
+       $(window).scroll(function(event) {
+         scrollTop = $(window).scrollTop();
+         if (scrollTop > 360) {
+           $fixed.addClass('fixed'),
+           topPosition = Math.max(0, fixedTop - scrollTop),
+           topPosition = Math.min(topPosition, (footerTop - scrollTop) - fixedHeight);
+           console.log(topPosition);
+           $fixed.css('top', topPosition);
+         } else {
+           $fixed.removeClass('fixed');
+         }
+       });
+    };
+    $('.view-get-started .attachment').fixer(300);
+
     // Download page source code button
     $('#openwrt-source-btn').click(function() {
       $('#openwrt-source').slideToggle();
     });
-    
+
   })
 
 })(jQuery);
