@@ -311,6 +311,10 @@ form .form-actions .form-submit:hover {
   padding-left: 30px;
   border-left: 5px solid #877AED;
 }
+#block-system-main .geshifilter pre {
+  border: 0 none;
+  padding-left: 0;
+}
 
 #block-system-main p.bigger,
 #block-system-main p.bigger a {
@@ -1038,10 +1042,6 @@ form .form-actions .form-submit:hover {
 
 .git-box .git_url_desc {
   float:left;
-}
-
-.syntaxhighlighter .gutter .line {
-  border-right: 3px solid #877AED !important;
 }
 
 /* Get Started */
