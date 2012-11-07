@@ -42,7 +42,7 @@
 
     function getRSS() {
       var feed_url =
-      'https://code.commotionwireless.net/activity.atom?key=e43fd10eb7855d7011ba8375f64d60e031036342';
+      'https://code.commotionwireless.net/activity.atom';
       var feed = new google.feeds.Feed(feed_url);
       feed.setNumEntries(4); // specify number of entries to load
       feed.load(function(result) {
