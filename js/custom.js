@@ -16,9 +16,10 @@
           $('ul.sf-menu').superfish();
         }
         // Load background images on Get Started
-        $('.frame').each( function(i) {
-          var bg_big = 'url(' + $(this).find('.full-background-url').text() + ')';
-          $(this).css('background-image', bg_big);
+        $('.frame .background').each( function(i) {
+          var full_bg = $(this).data('full');
+          $(this).attr('src', full_bg);
+          $(this).removeClass('mobile');
         });
       } else if (toFro.to == 'mobile') {
         // mobile version
@@ -31,7 +32,12 @@
           $('.region-menu .main-menu ul').unbind();
           $('.region-menu .main-menu li ul').removeAttr('style');
         }
-      }
+        $('.frame .background').each( function(i) {
+          var mobile_bg = $(this).data('mobile');
+          $(this).attr('src', mobile_bg);
+          $(this).addClass('mobile');
+        });
+     }
       $('.logo-img img').fadeIn();
     });
 
@@ -109,19 +115,18 @@
         event.preventDefault();
     });
     $.fn.fixer = function(pos) {
-       $fixed = $(this),
-       fixedTop = $fixed.position().top,
-       fixedHeight = $fixed.height(),
-       $footer = $("#section-footer"),
-       footerTop = $footer.position().top - pos,
+       var $fixed = $(this);
+       var fixedTop = $fixed.position().top;
+       var fixedHeight = $fixed.height();
+       $footer = $("#section-footer");
+       var footerTop = $footer.position().top - pos;
 
        $(window).scroll(function(event) {
-         scrollTop = $(window).scrollTop();
+         var scrollTop = $(window).scrollTop();
          if (scrollTop > 360) {
-           $fixed.addClass('fixed'),
-           topPosition = Math.max(0, fixedTop - scrollTop),
+           $fixed.addClass('fixed');
+           var topPosition = Math.max(0, fixedTop - scrollTop);
            topPosition = Math.min(topPosition, (footerTop - scrollTop) - fixedHeight);
-           console.log(topPosition);
            $fixed.css('top', topPosition);
          } else {
            $fixed.removeClass('fixed');
