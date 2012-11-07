@@ -749,6 +749,10 @@ form .form-actions .form-submit:hover {
 .front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 a.circ {
   width: 100%;
 }
+.front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 .panel-pane a,
+.front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 .panel-pane a:hover {
+    background-position: center center;
+}
 .front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 .pane-1 a {
   background-image: url(../images/get_started_mo.png);
 }
