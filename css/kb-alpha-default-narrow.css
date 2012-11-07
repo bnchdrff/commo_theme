@@ -3,10 +3,27 @@
  *  apply to the normal and widescreen layouts. You may override these styles in the normal 
  *  and widescreen CSS files as appropriate. */
 
-.responsive-layout-narrow.page-get-started #zone-content,
-.responsive-layout-narrow.page-get-started #region-content {
+.page-get-started #zone-content,
+.page-get-started #region-content {
   margin-left: 0;
   margin-right: 0;
 }
+.page-get-started #zone-content {
+  width: 1015px !important;
+}
+.page-get-started #region-content {
+  width: 995px !important;
+}
 
+.view-get-started .frame .frame-text {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
+#block-system-main .view-get-started .frame-desc {
+  margin-bottom: -30px;
+}
 
+.view-get-started .frame {
+  height: 710px;
+}

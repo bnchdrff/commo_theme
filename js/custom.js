@@ -20,6 +20,7 @@
           var full_bg = $(this).data('full');
           $(this).attr('src', full_bg);
           $(this).removeClass('mobile');
+          $('.attachment-before').show();
         });
       } else if (toFro.to == 'mobile') {
         // mobile version
@@ -36,6 +37,7 @@
           var mobile_bg = $(this).data('mobile');
           $(this).attr('src', mobile_bg);
           $(this).addClass('mobile');
+          $('.attachment-before').hide();
         });
      }
       $('.logo-img img').fadeIn();
@@ -101,7 +103,7 @@
     });
 
     // Get Started
-    $('.view-get-started .attachment .frame-button a').hover(function() {
+    $('.view-get-started.view-display-id-page .attachment .frame-button a').hover(function() {
       $(this).stop().animate({width: '100%'});
     }, function() {
       $(this).delay('800').animate({width: '15px'});
@@ -123,7 +125,7 @@
 
        $(window).scroll(function(event) {
          var scrollTop = $(window).scrollTop();
-         if (scrollTop > 360) {
+         if (scrollTop > 300) {
            $fixed.addClass('fixed');
            var topPosition = Math.max(0, fixedTop - scrollTop);
            topPosition = Math.min(topPosition, (footerTop - scrollTop) - fixedHeight);

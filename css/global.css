@@ -1049,16 +1049,23 @@ form .form-actions .form-submit:hover {
 }
 
 /* Get Started */
-.not-front.page-get-started #block-system-main .block-inner .content img,
-.not-front.page-get-started #block-system-main .block-inner .content {
+.page-get-involved #zone-content-wrapper #zone-content, 
+.page-get-started #zone-content-wrapper #zone-content {
+  padding-top: 0;
+}
+.page-get-involved #block-system-main .block-inner .content img,
+.page-get-involved #block-system-main .block-inner .content,
+.page-get-started #block-system-main .block-inner .content img,
+.page-get-started #block-system-main .block-inner .content {
   width: 100%;
   max-width: 100%;
 }
 .view-get-started .frame {
-  height: 725px;
   border-top: 1px solid #c3c;
   background-repeat:no-repeat;
   width: 100%;
+  position: relative;
+  text-align:center;
 }
 .view-get-started .frame .background {
   position: absolute;
@@ -1068,13 +1075,23 @@ form .form-actions .form-submit:hover {
   width: 100%;
   max-width: 420px !important;
   text-align:center;
+  position: relative;
 }
-.view-get-started .frame h2.frame-title {
-  margin-top: 500px;
-  margin-left: 600px;
+.view-get-started .frame .frame-text {
+  max-width: 333px;
+  margin: 0 auto;
+  text-align: left;
+  border-right: 10px solid #FF749C;
+  border-left: 10px solid #FF749C;
+  padding: 0 30px;
 }
-.view-get-started .frame-desc {
-  margin-left: 600px;
+#block-system-main .view-get-started .frame h2.frame-title {
+  font-size: 28px;
+  margin-top: 20px;
+}
+#block-system-main .view-get-started .frame-desc p,
+#block-system-main .view-get-started .frame-desc a {
+  font-size: 16px;
 }
 .view-get-started .hidden {
   display: none;
@@ -1082,9 +1099,14 @@ form .form-actions .form-submit:hover {
 .view-get-started .attachment-before {
   position: absolute;
   top: 0;
+  z-index: 20;
 }
 .view-get-started .attachment-before .view-display-id-attachment_1 {
   margin-top: 50px;
+  margin-left: 40px;
+}
+.view-get-started .attachment-before .view-display-id-attachment_2 {
+  margin-top: 70px;
   margin-left: 40px;
 }
 .view-get-started .attachment-before.fixed {
@@ -1092,22 +1114,34 @@ form .form-actions .form-submit:hover {
   top: 200px;
 }
 .view-get-started .attachment-before .frame-button {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 #block-system-main .view-get-started .attachment-before .frame-button a {
+  height: 24px;
   display:block;
+  font-size: 16px;
+}
+#block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a {
   overflow: hidden;
   width: 15px;
-  height: 18px;
   border: 0;
-  font-size: 16px;
   color: #000;
+}
+#block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a:focus,
+#block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a:hover {
+}
+#block-system-main .view-get-started.view-display-id-page_1 .attachment-before .frame-button a:focus,
+#block-system-main .view-get-started.view-display-id-page_1 .attachment-before .frame-button a:hover {
+  background-color: orange;
+
 }
 .view-get-started .attachment-before .frame-button a:focus,
 .view-get-started .attachment-before .frame-button a:hover {
   border: 0 !important;
 }
 .view-get-started .attachment-before .frame-button-title {
-  margin-left: 10px;
   text-transform: uppercase;
+  font-size: 13px;
+  padding: 5px 5px 5px 10px;
+  background-color: #fff;
 }
