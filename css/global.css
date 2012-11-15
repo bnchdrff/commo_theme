@@ -1131,7 +1131,7 @@ form .form-actions .form-submit:hover {
 .view-get-started .attachment-before .frame-button {
   margin-bottom: 7px;
   position:relative;
-  height: 25px;
+  height: 20px;
 }
 #block-system-main .view-get-started .attachment-before .frame-button a {
   height: 24px;
@@ -1142,12 +1142,13 @@ form .form-actions .form-submit:hover {
   width: 15px;
   border: 0;
   color: #000;
-  padding: 0 9px;
+  padding: 1px 9px 0;
   display: inline;
   height: 25px;
   position:absolute;
   z-index:2;
 }
+#block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a.active-frame,
 #block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a.active,
 #block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a:focus,
 #block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a:hover {
@@ -1165,7 +1166,7 @@ form .form-actions .form-submit:hover {
 }
 .view-get-started .attachment-before .frame-button-title {
   padding: 4px 0 3px;
-  margin-left: 15px;
+  margin-left: 10px;
   overflow: hidden;
   position:relative;
   z-index:1;
