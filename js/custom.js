@@ -103,10 +103,14 @@
     });
 
     // Get Started
-    $('.view-get-started.view-display-id-page .attachment .frame-button a').hover(function() {
-      $(this).stop().animate({width: '100%'});
+    $('.view-get-started.view-display-id-page .attachment .frame-button a.frame-nav-number').hover(function() {
+      $(this).stop('false', 'true').animate({width: '200px'}).addClass('active');
+      $(this).siblings('.frame-button-title').stop('false', 'true').animate({width: '100%'});
     }, function() {
-      $(this).delay('800').animate({width: '15px'});
+      $(this).delay('800').animate({width: '15px'}, 800, 'swing', function() {
+        $(this).removeClass('active');
+      });
+      $(this).siblings('.frame-button-title').delay('800').animate({width: '0%'});
     });
 
     $('.view-get-started .attachment .frame-button a').bind('click', function(event){
