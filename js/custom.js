@@ -103,48 +103,62 @@
     });
 
     // Get Started
-    $('.view-get-started.view-display-id-page .attachment .frame-button a.frame-nav-number').hover(function() {
-      $(this).stop('false', 'true').animate({width: '200px'}).addClass('active');
-      $(this).siblings('.frame-button-title').stop('false', 'true').animate({width: '100%'});
-    }, function() {
-      $(this).delay('800').animate({width: '15px'}, 800, 'swing', function() {
-        $(this).removeClass('active');
+    if ($('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved')) {
+      $('.view-get-started.view-display-id-page .attachment .frame-button a.frame-nav-number').hover(function() {
+        $(this).stop('false', 'true').animate({width: '200px'}).addClass('active');
+        $(this).siblings('.frame-button-title').stop('false', 'true').animate({width: '100%'});
+      }, function() {
+        $(this).delay('800').animate({width: '15px'}, 800, 'swing', function() {
+          $(this).removeClass('active');
+        });
+        $(this).siblings('.frame-button-title').delay('800').animate({width: '0%'});
       });
-      $(this).siblings('.frame-button-title').delay('800').animate({width: '0%'});
-    });
 
-    $('.view-get-started .attachment .frame-button a').bind('click', function(event){
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500,'easeInOutExpo');
-        event.preventDefault();
-    });
-    $.fn.fixer = function(pos) {
-       var $fixed = $(this);
-       var fixedTop = $fixed.position().top;
-       var fixedHeight = $fixed.height();
-       $footer = $("#section-footer");
-       var footerTop = $footer.position().top - pos;
+      $('.view-get-started .attachment .frame-button a').bind('click', function(event){
+          var $anchor = $(this);
+          $('html, body').stop().animate({
+              scrollTop: $($anchor.attr('href')).offset().top
+          }, 1500,'easeInOutExpo');
+          event.preventDefault();
+      });
+      $.fn.fixer = function(pos) {
+         var $fixed = $(this);
+         var fixedTop = $fixed.position().top;
+         var fixedHeight = $fixed.height();
+         $footer = $("#section-footer");
+         var footerTop = $footer.position().top - pos;
 
-       $(window).scroll(function(event) {
-         var scrollTop = $(window).scrollTop();
-         if (scrollTop > 300) {
-           $fixed.addClass('fixed');
-           var topPosition = Math.max(0, fixedTop - scrollTop);
-           topPosition = Math.min(topPosition, (footerTop - scrollTop) - fixedHeight);
-           $fixed.css('top', topPosition);
-         } else {
-           $fixed.removeClass('fixed');
-         }
-       });
-    };
-    $('.view-get-started .attachment').fixer(300);
+         $(window).scroll(function(event) {
+           var scrollTop = $(window).scrollTop();
+           // Nav buttons positioning.
+           if (scrollTop > 300) {
+             $fixed.addClass('fixed');
+             var topPosition = Math.max(0, fixedTop - scrollTop);
+             topPosition = Math.min(topPosition, (footerTop - scrollTop) - fixedHeight);
+             $fixed.css('top', topPosition);
+           } else {
+             $fixed.removeClass('fixed');
+           }
+           $('.frame-anchor').each( function() {
+             var anchorTop = $(this).offset().top;
+             var frameId = $(this).attr('id');
+             var frameNum = frameId.substr(frameId.length - 1);
+             if ((anchorTop - 50 < scrollTop) && (anchorTop + 660 > scrollTop)) {
+               $('.attachment .views-row-' + frameNum + ' a').addClass('active-frame');
+             } else {
+               $('.attachment .views-row-' + frameNum + ' a').removeClass('active-frame');
+             }
 
-    // Download page source code button
-    $('#openwrt-source-btn').click(function() {
-      $('#openwrt-source').slideToggle();
-    });
+           });
+         });
+      };
+      $('.view-get-started .attachment').fixer(300);
+
+      // Download page source code button
+      $('#openwrt-source-btn').click(function() {
+        $('#openwrt-source').slideToggle();
+      });
+    }
 
   })
 
