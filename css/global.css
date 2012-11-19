@@ -125,10 +125,11 @@ form .form-actions .form-submit:hover {
 }
 #block-system-main .search-form .form-text,
 .block-search-form .form-text,
-.block-search-form--2 .form-text {
+#section-footer #block-search-form--2 .form-text {
   background: #e6e6e6 url(../images/search.png) no-repeat 4px 3px;
   padding-left: 25px;
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
   border: 0 none;
 }
 #block-system-main .search-form .form-item label,
@@ -1067,7 +1068,7 @@ form .form-actions .form-submit:hover {
   text-align:center;
 }
 .view-get-started .frame .background {
-  position: absolute;
+  position: relative;
   z-index: -10;
 }
 #block-system-main .view-get-started .frame .background.mobile {

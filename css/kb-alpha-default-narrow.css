@@ -8,16 +8,15 @@
   margin-left: 0;
   margin-right: 0;
 }
-.page-get-started #zone-content {
-  width: 1020px !important;
-}
+.page-get-started #zone-content,
 .page-get-started #region-content {
-  width: 1000px !important;
+  width: 100%;
 }
 
 .view-get-started .frame .frame-text {
   position: absolute;
-  bottom: 100px;
+  max-width: 250px;
+  bottom: 30px;
   right: 0;
   background: url(../images/white80opacity.png) repeat;
 }
@@ -26,6 +25,5 @@
 }
 
 .view-get-started .frame {
-  height: 710px;
   text-align:left;
 }

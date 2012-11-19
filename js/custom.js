@@ -136,11 +136,12 @@
          var $fixed = $(this);
          var fixedTop = $fixed.position().top;
          var fixedHeight = $fixed.height();
-         $footer = $("#section-footer");
-         var footerTop = $footer.position().top - pos;
 
          $(window).scroll(function(event) {
+           $footer = $("#section-footer");
+           var footerTop = $footer.position().top - pos;
            var scrollTop = $(window).scrollTop();
+           var frameHeight = $('.views-row-1 .background').height();
            // Nav buttons positioning.
            if (scrollTop > 300) {
              $fixed.addClass('fixed');
@@ -149,12 +150,14 @@
              $fixed.css('top', topPosition);
            } else {
              $fixed.removeClass('fixed');
+             $fixed.css('top', 0);
            }
+           // Show Nav button as active if Frame is visible.
            $('.frame-anchor').each( function() {
              var anchorTop = $(this).offset().top;
              var frameId = $(this).attr('id');
              var frameNum = frameId.substr(frameId.length - 1);
-             if ((anchorTop - 50 < scrollTop) && (anchorTop + 660 > scrollTop)) {
+             if ((anchorTop - 50 < scrollTop) && (anchorTop + frameHeight - 50 > scrollTop)) {
                $('.attachment .views-row-' + frameNum + ' a').addClass('active-frame');
              } else {
                $('.attachment .views-row-' + frameNum + ' a').removeClass('active-frame');

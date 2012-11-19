@@ -6,4 +6,12 @@
 .page-get-started #region-content {
   margin-left: auto;
   margin-right: auto;
+  width: 1020px;
+}
+.view-get-started .frame {
+  height: 724px;
+}
+.view-get-started .frame .frame-text {
+  bottom: 100px;
+  max-width: 333px;
 }
