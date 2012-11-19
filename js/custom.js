@@ -114,12 +114,23 @@
         $(this).siblings('.frame-button-title').delay('500').animate({width: '0%'});
       });
 
+      $(window).bind('hashchange', function(e) {
+        var anchor = '#' + $.param.fragment();
+        console.log(e);
+        console.log(anchor + ' at ' + $(anchor).offset().top + ' , window: ' + $(window).scrollTop());
+        $('html, body').stop(true, true).animate({
+          scrollTop: $(anchor).offset().top
+        }, 1500,'easeInOutExpo');
+      });
+
       $('.view-get-started .attachment .frame-button a').bind('click', function(event){
-          var $anchor = $(this);
-          $('html, body').stop().animate({
-              scrollTop: $($anchor.attr('href')).offset().top
-          }, 1500,'easeInOutExpo');
-          event.preventDefault();
+        event.preventDefault();
+        var anchor = $(this).attr('href');
+        $('html, body').stop(true, true).animate({
+          scrollTop: $(anchor).offset().top
+        }, 1500,'easeInOutExpo', function () {
+          $.bbq.pushState(anchor, 2);
+        });
       });
       $.fn.fixer = function(pos) {
          var $fixed = $(this);
