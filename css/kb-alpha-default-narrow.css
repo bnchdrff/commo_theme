@@ -17,8 +17,9 @@
 
 .view-get-started .frame .frame-text {
   position: absolute;
-  bottom: 50px;
+  bottom: 100px;
   right: 0;
+  background: url(../images/white80opacity.png) repeat;
 }
 #block-system-main .view-get-started .frame-desc {
   margin-bottom: -30px;

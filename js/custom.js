@@ -108,10 +108,10 @@
         $(this).stop('false', 'true').animate({width: '200px'}).addClass('active');
         $(this).siblings('.frame-button-title').stop('false', 'true').animate({width: '100%'});
       }, function() {
-        $(this).delay('800').animate({width: '15px'}, 800, 'swing', function() {
+        $(this).delay('500').animate({width: '15px'}, 800, 'swing', function() {
           $(this).removeClass('active');
         });
-        $(this).siblings('.frame-button-title').delay('800').animate({width: '0%'});
+        $(this).siblings('.frame-button-title').delay('500').animate({width: '0%'});
       });
 
       $('.view-get-started .attachment .frame-button a').bind('click', function(event){

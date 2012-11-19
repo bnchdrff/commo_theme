@@ -1070,8 +1070,8 @@ form .form-actions .form-submit:hover {
   position: absolute;
   z-index: -10;
 }
-.view-get-started .frame .background.mobile {
-  width: 100%;
+#block-system-main .view-get-started .frame .background.mobile {
+  width: 75%;
   max-width: 420px !important;
   text-align:center;
   position: relative;
@@ -1083,14 +1083,13 @@ form .form-actions .form-submit:hover {
   border-right: 10px solid #FF749C;
   border-left: 10px solid #FF749C;
   padding: 0 30px;
-  background: url(../images/white80opacity.png) repeat;
 }
 #block-system-main .view-get-started .frame h2.frame-title {
   font-size: 28px;
   margin-top: 20px;
 }
 #block-system-main .view-get-started .frame-desc {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 #block-system-main .view-get-started .frame-desc p,
 #block-system-main .view-get-started .frame-desc a {
