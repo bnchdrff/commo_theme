@@ -116,8 +116,6 @@
 
       $(window).bind('hashchange', function(e) {
         var anchor = '#' + $.param.fragment();
-        console.log(e);
-        console.log(anchor + ' at ' + $(anchor).offset().top + ' , window: ' + $(window).scrollTop());
         $('html, body').stop(true, true).animate({
           scrollTop: $(anchor).offset().top
         }, 1500,'easeInOutExpo');
