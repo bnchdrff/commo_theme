@@ -15,8 +15,8 @@
           $('.region-menu .main-menu').addClass('sf-menu').addClass('sf-js-enabled').removeClass('menu-mobile');
           $('ul.sf-menu').superfish();
         }
-        // Load background images on Get Started
-        $('.frame .background').each( function(i) {
+        // Load background images on Get Started.
+        $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
           var full_bg = $(this).data('full');
           $(this).attr('src', full_bg);
           $(this).removeClass('mobile');
@@ -33,7 +33,8 @@
           $('.region-menu .main-menu ul').unbind();
           $('.region-menu .main-menu li ul').removeAttr('style');
         }
-        $('.frame .background').each( function(i) {
+        // Get Started, swap in mobile version.
+        $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
           var mobile_bg = $(this).data('mobile');
           $(this).attr('src', mobile_bg);
           $(this).addClass('mobile');
@@ -104,6 +105,7 @@
 
     // Get Started
     if ($('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved')) {
+      // Animate Nav popouts.
       $('.view-get-started.view-display-id-page .attachment .frame-button a.frame-nav-number').hover(function() {
         $(this).stop('false', 'true').animate({width: '200px'}).addClass('active');
         $(this).siblings('.frame-button-title').stop('false', 'true').animate({width: '100%'});
@@ -134,6 +136,7 @@
          var $fixed = $(this);
          var fixedTop = $fixed.position().top;
          var fixedHeight = $fixed.height();
+         var zoneBegin = $('#zone-content-wrapper').offset().top;
 
          $(window).scroll(function(event) {
            $footer = $("#section-footer");
@@ -141,7 +144,7 @@
            var scrollTop = $(window).scrollTop();
            var frameHeight = $('.views-row-1 .background').height();
            // Nav buttons positioning.
-           if (scrollTop > 300) {
+           if (scrollTop > zoneBegin) {
              $fixed.addClass('fixed');
              var topPosition = Math.max(0, fixedTop - scrollTop);
              topPosition = Math.min(topPosition, (footerTop - scrollTop) - fixedHeight);
