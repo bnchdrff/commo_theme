@@ -1165,6 +1165,7 @@ form .form-actions .form-submit:hover {
 #block-system-main .view-get-started.view-get-involved .attachment-before .frame-button a {
   padding: 0px 5px;
   display:inline-block;
+  background-color: #fff;
 }
 #block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a.active-frame,
 #block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a.active,
@@ -1176,6 +1177,7 @@ form .form-actions .form-submit:hover {
 #block-system-main .view-get-started.view-get-involved .attachment-before .frame-button a:focus,
 #block-system-main .view-get-started.view-get-involved .attachment-before .frame-button a:hover {
   background-color: #FF749C;
+  color: #fff;
 }
 .view-get-started .attachment-before .frame-button a:focus,
 .view-get-started .attachment-before .frame-button a:hover {
