@@ -105,6 +105,21 @@
 
     // Get Started
     if ($('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved')) {
+      function scrollToFrame(frame, push) {
+        if ($(frame).length && frame.indexOf('#frame-') == 0) {
+          $('html, body').stop(true, true).animate({
+            scrollTop: $(frame).offset().top
+          }, 1500,'easeInOutExpo', function () {
+            // Update state if necessary.
+            if (push) {
+              $.bbq.pushState(frame, 2);
+            }
+          });
+        }
+      }
+      // Skip to slide.
+      var loadedFrame = $.param.fragment() == '' ? '#frame-1' : '#' + $.param.fragment();
+      scrollToFrame(loadedFrame, true);
       // Animate Nav popouts.
       $('.view-get-started.view-display-id-page .attachment .frame-button a.frame-nav-number').hover(function() {
         $(this).stop('false', 'true').animate({width: '200px'}).addClass('active');
@@ -118,20 +133,15 @@
 
       $(window).bind('hashchange', function(e) {
         var anchor = '#' + $.param.fragment();
-        $('html, body').stop(true, true).animate({
-          scrollTop: $(anchor).offset().top
-        }, 1500,'easeInOutExpo');
+        scrollToFrame(anchor, false);
       });
 
       $('.view-get-started .attachment .frame-button a').bind('click', function(event){
         event.preventDefault();
         var anchor = $(this).attr('href');
-        $('html, body').stop(true, true).animate({
-          scrollTop: $(anchor).offset().top
-        }, 1500,'easeInOutExpo', function () {
-          $.bbq.pushState(anchor, 2);
-        });
+        scrollToFrame(anchor, true);
       });
+      // Fix the nav buttons when appropriate.
       $.fn.fixer = function(pos) {
          var $fixed = $(this);
          var fixedTop = $fixed.position().top;
@@ -158,7 +168,7 @@
              var anchorTop = $(this).offset().top;
              var frameId = $(this).attr('id');
              var frameNum = frameId.substr(frameId.length - 1);
-             if ((anchorTop - 50 < scrollTop) && (anchorTop + frameHeight - 50 > scrollTop)) {
+             if ((anchorTop - 50 < scrollTop) && (anchorTop + frameHeight - 51 > scrollTop)) {
                $('.attachment .views-row-' + frameNum + ' a').addClass('active-frame');
              } else {
                $('.attachment .views-row-' + frameNum + ' a').removeClass('active-frame');
