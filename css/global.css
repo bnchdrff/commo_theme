@@ -102,9 +102,11 @@ form .form-actions .form-submit:hover {
 }
 #region-branding .logo-img {
   width: 250px;
+  height: 140px;
 }
 .responsive-layout-mobile #region-branding .logo-img {
   width: 105px;
+  height: 100px;
 }
 
 /* Menu */
@@ -1070,6 +1072,10 @@ form .form-actions .form-submit:hover {
 .view-get-started .frame .background {
   position: relative;
   z-index: -10;
+  display:none;
+}
+.view-get-started.view-get-involved .frame .background {
+  display:block;
 }
 #block-system-main .view-get-started .frame .background.mobile {
   width: 75%;
@@ -1122,6 +1128,7 @@ form .form-actions .form-submit:hover {
   position: absolute;
   top: 0;
   z-index: 20;
+  display:none;
 }
 .view-get-started .attachment-before .view-display-id-attachment_1 {
   margin-top: 50px;

@@ -4,28 +4,31 @@
   google.load("feeds", "1");
 
   $( document ).ready( function() {
+    var justLoaded = true;
 
     // Responsive adjustments
     $('body').bind('responsivelayout', function(ev, toFro) {
       if (toFro.from == 'mobile' || (toFro.to != 'mobile' && toFro.from === undefined)) {
         // larger than mobile
         var src = $('.logo-img img').attr('src');
-        $('.logo-img img').attr('src', src.replace('Commotion_logo_mo.png', 'commotion_kbabout_measure-03.png'));
+        $('.logo-img img').attr('src', src.replace('Commotion_logo_mo.png', 'commotion_kbabout_measure-03.png')).fadeIn();
         if (!$('.region-menu .main-menu').hasClass('sf-menu')) {
           $('.region-menu .main-menu').addClass('sf-menu').addClass('sf-js-enabled').removeClass('menu-mobile');
           $('ul.sf-menu').superfish();
         }
-        // Load background images on Get Started.
-        $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
-          var full_bg = $(this).data('full');
-          $(this).attr('src', full_bg);
-          $(this).removeClass('mobile');
+        if ($('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved')) {
+          // Load background images on Get Started.
+          $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
+            var full_bg = $(this).data('full');
+            $(this).attr('src', full_bg).fadeIn();
+            $(this).removeClass('mobile');
+          });
           $('.attachment-before').show();
-        });
+        }
       } else if (toFro.to == 'mobile') {
         // mobile version
         var src = $('.logo-img img').attr('src');
-        $('.logo-img img').attr('src', src.replace('commotion_kbabout_measure-03.png', 'Commotion_logo_mo.png'));
+        $('.logo-img img').attr('src', src.replace('commotion_kbabout_measure-03.png', 'Commotion_logo_mo.png')).fadeIn();
         if ($('.region-menu .main-menu').hasClass('sf-menu')) {
           $('.region-menu .main-menu').removeClass('sf-menu').removeClass('sf-js-enabled');
           $('.region-menu .main-menu').unbind().addClass('menu-mobile');
@@ -33,15 +36,22 @@
           $('.region-menu .main-menu ul').unbind();
           $('.region-menu .main-menu li ul').removeAttr('style');
         }
-        // Get Started, swap in mobile version.
-        $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
-          var mobile_bg = $(this).data('mobile');
-          $(this).attr('src', mobile_bg);
-          $(this).addClass('mobile');
+        if ($('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved')) {
+          // Get Started, swap in mobile version.
+          $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
+            var mobile_bg = $(this).data('mobile');
+            $(this).attr('src', mobile_bg).fadeIn();
+            $(this).addClass('mobile');
+          });
           $('.attachment-before').hide();
-        });
-     }
-      $('.logo-img img').fadeIn();
+        }
+      }
+      // Skip to slide. Needs to happen after mobile jazz.
+      if (justLoaded) {
+        var loadedFrame = $.param.fragment() == '' ? '#frame-1' : '#' + $.param.fragment();
+        scrollToFrame(loadedFrame, true);
+        justLoaded = false;
+      }
     });
 
     $(window).resize(function() {
@@ -106,20 +116,18 @@
     // Get Started
     if ($('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved')) {
       function scrollToFrame(frame, push) {
-        if ($(frame).length && frame.indexOf('#frame-') == 0) {
-          $('html, body').stop(true, true).animate({
-            scrollTop: $(frame).offset().top
-          }, 1500,'easeInOutExpo', function () {
-            // Update state if necessary.
-            if (push) {
-              $.bbq.pushState(frame, 2);
-            }
-          });
+        if (!$(frame).length || frame.indexOf('#frame-') != 0) {
+          frame = '#frame-1';
         }
+        $('html, body').stop(true, true).animate({
+          scrollTop: $(frame).offset().top
+        }, 1500,'easeInOutExpo', function () {
+          // Update state if necessary.
+          if (push) {
+            $.bbq.pushState(frame, 2);
+          }
+        });
       }
-      // Skip to slide.
-      var loadedFrame = $.param.fragment() == '' ? '#frame-1' : '#' + $.param.fragment();
-      scrollToFrame(loadedFrame, true);
       // Animate Nav popouts.
       $('.view-get-started.view-display-id-page .attachment .frame-button a.frame-nav-number').hover(function() {
         $(this).stop('false', 'true').animate({width: '200px'}).addClass('active');
