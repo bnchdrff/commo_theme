@@ -1076,7 +1076,10 @@ form .form-actions .form-submit:hover {
 }
 .view-get-started.view-get-involved .frame .background {
   display:block;
+  margin-left: auto;
+  margin-right: auto;
 }
+#block-system-main .view-get-involved .frame .background,
 #block-system-main .view-get-started .frame .background.mobile {
   width: 75%;
   max-width: 420px !important;
@@ -1096,10 +1099,8 @@ form .form-actions .form-submit:hover {
   padding-top: 20px;
 }
 #block-system-main .view-get-started.view-get-involved .frame h2.frame-title {
-  text-align:center;
 }
 #block-system-main .view-get-started .frame-desc {
-  padding-bottom: 20px;
 }
 #block-system-main .view-get-started .frame-desc p,
 #block-system-main .view-get-started .frame-desc a {
@@ -1166,6 +1167,7 @@ form .form-actions .form-submit:hover {
   padding: 0px 5px;
   display:inline-block;
   background-color: #fff;
+  font-family: AsapRegular;
 }
 #block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a.active-frame,
 #block-system-main .view-get-started.view-display-id-page .attachment-before .frame-button a.active,
@@ -1174,6 +1176,8 @@ form .form-actions .form-submit:hover {
   background: transparent url(../images/pink_nav_dot.png) no-repeat 0 0;
   color: #fff;
 }
+#block-system-main .view-get-started.view-get-involved .attachment-before .frame-button a.active,
+#block-system-main .view-get-started.view-get-involved .attachment-before .frame-button a.active-frame,
 #block-system-main .view-get-started.view-get-involved .attachment-before .frame-button a:focus,
 #block-system-main .view-get-started.view-get-involved .attachment-before .frame-button a:hover {
   background-color: #FF749C;
@@ -1184,8 +1188,9 @@ form .form-actions .form-submit:hover {
   border: 0 !important;
 }
 .view-get-started .attachment-before .frame-button-title {
-  padding: 4px 0 3px;
+  padding: 2px 0 3px;
   margin-left: 10px;
+  margin-top: 2px;
   overflow: hidden;
   position:relative;
   z-index:1;
@@ -1194,8 +1199,8 @@ form .form-actions .form-submit:hover {
   display: inline-block;
 }
 .view-get-started .attachment-before .frame-button-title span {
-  text-transform: uppercase;
-  font-size: 13px;
+  font-size: 16px;
+  line-height: 18px;
   padding: 5px 5px 3px 20px;
   background-color: #fff;
   width: 0px;

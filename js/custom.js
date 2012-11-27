@@ -116,6 +116,7 @@
     // Get Started
     if ($('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved')) {
       function scrollToFrame(frame, push) {
+        // If no frame or invalid frame specified in hash, default to first.
         if (!$(frame).length || frame.indexOf('#frame-') != 0) {
           frame = '#frame-1';
         }

@@ -3,13 +3,12 @@
  *  apply to the normal and widescreen layouts. You may override these styles in the normal 
  *  and widescreen CSS files as appropriate. */
 
+.page-get-involved #zone-content,
+.page-get-involved #region-content,
 .page-get-started #zone-content,
 .page-get-started #region-content {
   margin-left: 0;
   margin-right: 0;
-}
-.page-get-started #zone-content,
-.page-get-started #region-content {
   width: 100%;
 }
 
@@ -21,8 +20,6 @@
   background: url(../images/white80opacity.png) repeat;
 }
 .view-get-started.view-get-involved .frame .frame-text {
-  width: 200px;
-  bottom: 30px;
 }
 #block-system-main .view-get-started .frame-desc {
 }
@@ -32,11 +29,12 @@
 }
 .view-get-started.view-get-involved .frame {
   text-align:center;
+  min-height: 700px;
 }
 #block-system-main .view-get-started.view-get-involved .frame .background {
   width: 75%;
   min-width: 725px;
+  padding-top: 40px;
 }
 #block-system-main .view-get-started.view-get-involved .frame h2.frame-title {
-  font-size: 40px;
 }
