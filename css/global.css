@@ -1114,94 +1114,94 @@ form .form-actions .form-submit:hover {
 
 @media print {
 
-/* Overflow */
+  /* Overflow */
 
-.body {
-overflow: visible !important
-}
- 
-/* Text Styles */ 
- 
-p, dl, hr, ol, ul, pre, table, address, fieldset {
-  font-size: 12pt; 
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .body {
+    overflow: visible !important;
+  }
 
-h1 {
-  font-size: 20pt;
-  font-family: Arial, sans-serif;
-}
+  /* Text Styles */
 
-h2 {
-  font-size: 15pt;
-  font-family: Arial, sans-serif;
-  text-decoration: underline;
-}
+  p, dl, hr, ol, ul, pre, table, address, fieldset {
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+    font-size: 20pt;
+    font-family: Arial, sans-serif;
+  }
+
+  h2 {
+    font-size: 15pt;
+    font-family: Arial, sans-serif;
+    text-decoration: underline;
+  }
 
 
-h3, h4, h5, h6  {
-  font-size: 15pt;
-  font-family: Arial, sans-serif;
-}
+  h3, h4, h5, h6  {
+    font-size: 15pt;
+    font-family: Arial, sans-serif;
+  }
 
-#region-content {
-  width: 100%;
-  margin: 0px 0px 20px 0px;
-  float: none;
-}
+  #region-content {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+    float: none;
+  }
 
-#region-preface-first {
-  margin: 0;
-}
+  #region-preface-first {
+    margin: 0;
+  }
 
-/* Image Scale */
-img { 
-  max-width: 75%; 
-}
+  /* Image Scale */
+  img {
+    max-width: 75%;
+  }
 
-/* Show URL */
-a:link, a:visited {
-  color: #666; 
-  font-weight: bold;
-  text-decoration: underline;
-}
+  /* Show URL */
+  a:link, a:visited {
+    color: #666;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 
-#zone-content a:link:after, #content a:visited:after {
-  content: " (" attr(href) ") "; 
-  font-size: 90%;
-}
+  #zone-content a:link:after, #content a:visited:after {
+    content: " (" attr(href) ") ";
+    font-size: 90%;
+  }
 
-#zone-content a[href^="/"]:after {
-  content: " (http://www.alistapart.com" attr(href) ") ";
-}
+  #zone-content a[href^="/"]:after {
+    content: " (https://commotionwireless.net" attr(href) ") ";
+  }
 
-/* Comments page break */
+  /* Comments page break */
 
-#comments { 
-  page-break-before: always;
-}
+  #comments {
+    page-break-before: always;
+  }
 
-/* Pre text wrap */
-div.geshifilter {
-  word-wrap: break-word;
-}
+  /* Pre text wrap */
+  div.geshifilter {
+    word-wrap: break-word;
+  }
 
-/* Hide Stuff */
+  /* Hide Stuff */
 
-#region-menu, #region-sidebar-second, #section-footer {
-  display: none;
-}
+  #region-menu, #region-sidebar-second, #section-footer {
+    display: none;
+  }
 
-.book-navigation {
-  display: none;
-}
+  .book-navigation {
+    display: none;
+  }
 
-hr {
-  visibility: hidden;
-}
+  hr {
+    visibility: hidden;
+  }
 
-.node ol, .node ul {
-  padding-left: 1.4em
-}
+  .node ol, .node ul {
+    padding-left: 1.4em;
+  }
 
 }
