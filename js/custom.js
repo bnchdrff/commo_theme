@@ -5,6 +5,7 @@
 
   $( document ).ready( function() {
     var justLoaded = true;
+    var getStartedOrInvolved = $('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved');
 
     // Responsive adjustments
     $('body').bind('responsivelayout', function(ev, toFro) {
@@ -16,7 +17,7 @@
           $('.region-menu .main-menu').addClass('sf-menu').addClass('sf-js-enabled').removeClass('menu-mobile');
           $('ul.sf-menu').superfish();
         }
-        if ($('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved')) {
+        if (getStartedOrInvolved) {
           // Load background images on Get Started.
           $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
             var full_bg = $(this).data('full');
@@ -36,7 +37,7 @@
           $('.region-menu .main-menu ul').unbind();
           $('.region-menu .main-menu li ul').removeAttr('style');
         }
-        if ($('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved')) {
+        if (getStartedOrInvolved) {
           // Get Started, swap in mobile version.
           $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
             var mobile_bg = $(this).data('mobile');
@@ -47,7 +48,7 @@
         }
       }
       // Skip to slide. Needs to happen after mobile jazz.
-      if (justLoaded) {
+      if (justLoaded && getStartedOrInvolved) {
         var loadedFrame = $.param.fragment() == '' ? '#frame-1' : '#' + $.param.fragment();
         scrollToFrame(loadedFrame, true);
         justLoaded = false;
@@ -114,7 +115,7 @@
     });
 
     // Get Started
-    if ($('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved')) {
+    if (getStartedOrInvolved) {
       function scrollToFrame(frame, push) {
         // If no frame or invalid frame specified in hash, default to first.
         if (!$(frame).length || frame.indexOf('#frame-') != 0) {
@@ -153,9 +154,16 @@
       // Fix the nav buttons when appropriate.
       $.fn.fixer = function(pos) {
          var $fixed = $(this);
-         var fixedTop = $fixed.position().top;
+         if (typeof $fixed != 'object') {
+           return;
+         }
+         var fixedTop = '0';
          var fixedHeight = $fixed.height();
          var zoneBegin = $('#zone-content-wrapper').offset().top;
+         if ($(window).scrollTop() > zoneBegin) {
+           $fixed.css('top', fixedTop);
+           $fixed.addClass('fixed');
+         }
 
          $(window).scroll(function(event) {
            $footer = $("#section-footer");
