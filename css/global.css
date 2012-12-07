@@ -754,7 +754,7 @@ form .form-actions .form-submit:hover {
 }
 .front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 .panel-pane a,
 .front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 .panel-pane a:hover {
-    background-position: center center;
+  background-position: center center;
 }
 .front.responsive-layout-mobile #zone-content-wrapper .panel-panel.grid-6 .pane-1 a {
   background-image: url(../images/get_started_mo.png);
@@ -1204,4 +1204,106 @@ form .form-actions .form-submit:hover {
   padding: 5px 5px 3px 20px;
   background-color: #fff;
   width: 0px;
+}
+
+/**
+ * Print styles
+ */
+
+@media print {
+
+  /* Overflow */
+
+  .body {
+    overflow: visible !important;
+  }
+
+  /* Text Styles */
+
+  p, dl, hr, ol, ul, pre, table, address, fieldset {
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+    font-size: 20pt;
+    font-family: Arial, sans-serif;
+  }
+
+  h2 {
+    font-size: 15pt;
+    font-family: Arial, sans-serif;
+    text-decoration: underline;
+  }
+
+
+  h3, h4, h5, h6  {
+    font-size: 15pt;
+    font-family: Arial, sans-serif;
+  }
+
+  #section-content {
+    position: static;
+  }
+
+  #region-content {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+    float: none;
+  }
+
+  #region-preface-first {
+    margin: 0;
+  }
+
+  /* Image Scale */
+  img {
+    max-width: 75%;
+  }
+
+  /* Show URL */
+  a:link, a:visited {
+    color: #666;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  #zone-content a:link:after, #content a:visited:after {
+    content: " (" attr(href) ") ";
+    font-size: 90%;
+  }
+
+  #zone-content a[href^="/"]:after {
+    content: " (https://commotionwireless.net" attr(href) ") ";
+  }
+
+  /* Comments page break */
+
+  #comments {
+    page-break-before: always;
+  }
+
+  /* Pre text wrap */
+  div.geshifilter {
+    word-wrap: break-word;
+  }
+
+  /* Hide Stuff */
+
+  #region-menu, #region-sidebar-second, #section-footer {
+    display: none;
+  }
+
+  .book-navigation {
+    display: none;
+  }
+
+  hr {
+    visibility: hidden;
+  }
+
+  .node ol, .node ul {
+    padding-left: 1.4em;
+  }
+
 }
