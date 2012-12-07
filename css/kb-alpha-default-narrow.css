@@ -14,7 +14,6 @@
 
 .view-get-started .frame .frame-text {
   position: absolute;
-  max-width: 250px;
   bottom: 30px;
   right: 0;
   background: url(../images/white80opacity.png) repeat;
@@ -29,12 +28,11 @@
 }
 .view-get-started.view-get-involved .frame {
   text-align:center;
-  min-height: 700px;
+  min-height: 600px;
 }
 #block-system-main .view-get-started.view-get-involved .frame .background {
   width: 75%;
-  min-width: 725px;
-  padding-top: 40px;
+  min-width: 750px;
 }
 #block-system-main .view-get-started.view-get-involved .frame h2.frame-title {
 }
