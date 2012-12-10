@@ -5,7 +5,8 @@
 
   $( document ).ready( function() {
     var justLoaded = true;
-    var getStartedOrInvolved = $('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved');
+    $.getStarted = {};
+    $.getStarted.loaded = $('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved');
 
     // Responsive adjustments
     $('body').bind('responsivelayout', function(ev, toFro) {
@@ -17,7 +18,7 @@
           $('.region-menu .main-menu').addClass('sf-menu').addClass('sf-js-enabled').removeClass('menu-mobile');
           $('ul.sf-menu').superfish();
         }
-        if (getStartedOrInvolved) {
+        if ($.getStarted.loaded) {
           // Load background images on Get Started.
           $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
             var full_bg = $(this).data('full');
@@ -37,7 +38,7 @@
           $('.region-menu .main-menu ul').unbind();
           $('.region-menu .main-menu li ul').removeAttr('style');
         }
-        if (getStartedOrInvolved) {
+        if ($.getStarted.loaded) {
           // Get Started, swap in mobile version.
           $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
             var mobile_bg = $(this).data('mobile');
@@ -48,10 +49,14 @@
         }
       }
       // Skip to slide. Needs to happen after mobile jazz.
-      if (justLoaded && getStartedOrInvolved) {
-        var loadedFrame = $.param.fragment() == '' ? '#frame-1' : '#' + $.param.fragment();
-        scrollToFrame(loadedFrame, true);
+      if (justLoaded && $.getStarted.loaded) {
         justLoaded = false;
+        anchors = [];
+        $('.view-get-started .frame-anchor').each( function(index, anchor) {
+          anchors.push('#' + $(anchor).attr("name"));
+        });
+        $.getStarted.anchors = anchors;
+        scrollToFrame($.param.fragment(), true);
       }
     });
 
@@ -115,12 +120,16 @@
     });
 
     // Get Started
-    if (getStartedOrInvolved) {
+    if ($.getStarted.loaded) {
       function scrollToFrame(frame, push) {
         // If no frame or invalid frame specified in hash, default to first.
-        if (!$(frame).length || frame.indexOf('#frame-') != 0) {
-          frame = '#frame-1';
+        if (frame.indexOf('#') < 0) {
+          frame = '#' + frame;
         }
+        if ($.getStarted.anchors.indexOf(frame) < 0) {
+          frame = $.getStarted.anchors[0];
+        }
+
         $('html, body').stop(true, true).animate({
           scrollTop: $(frame).offset().top
         }, 1500,'easeInOutExpo', function () {
@@ -142,8 +151,7 @@
       });
 
       $(window).bind('hashchange', function(e) {
-        var anchor = '#' + $.param.fragment();
-        scrollToFrame(anchor, false);
+        scrollToFrame($.param.fragment(), false);
       });
 
       $('.view-get-started .attachment .frame-button a').bind('click', function(event){
