@@ -192,11 +192,10 @@
            $('.frame-anchor').each( function() {
              var anchorTop = $(this).offset().top;
              var frameId = $(this).attr('id');
-             var frameNum = frameId.substr(frameId.length - 1);
              if ((anchorTop - 50 < scrollTop) && (anchorTop + frameHeight - 51 > scrollTop)) {
-               $('.attachment .views-row-' + frameNum + ' a').addClass('active-frame');
+               $('.attachment a.' + frameId).addClass('active-frame');
              } else {
-               $('.attachment .views-row-' + frameNum + ' a').removeClass('active-frame');
+               $('.attachment a.' + frameId).removeClass('active-frame');
              }
 
            });
