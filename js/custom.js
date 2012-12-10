@@ -6,21 +6,22 @@
   $( document ).ready( function() {
     var justLoaded = true;
     $.getStarted = {};
-    $.getStarted.loaded = $('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved');
+    $.getStarted.context = ( $('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved') ) ? $('#block-system-main .view-get-started:eq(0)') : null;
 
     // Responsive adjustments
     $('body').bind('responsivelayout', function(ev, toFro) {
       if (toFro.from == 'mobile' || (toFro.to != 'mobile' && toFro.from === undefined)) {
         // larger than mobile
-        var src = $('.logo-img img').attr('src');
-        $('.logo-img img').attr('src', src.replace('Commotion_logo_mo.png', 'commotion_kbabout_measure-03.png')).fadeIn();
-        if (!$('.region-menu .main-menu').hasClass('sf-menu')) {
-          $('.region-menu .main-menu').addClass('sf-menu').addClass('sf-js-enabled').removeClass('menu-mobile');
-          $('ul.sf-menu').superfish();
+        var $logo = $('#logo');
+        var src = $logo.attr('src');
+        $logo.attr('src', src.replace('Commotion_logo_mo.png', 'commotion_kbabout_measure-03.png')).fadeIn();
+        if (!$('#region-menu .main-menu').hasClass('sf-menu')) {
+          $('#region-menu .main-menu').addClass('sf-menu').addClass('sf-js-enabled').removeClass('menu-mobile');
+          $('#region-menu ul.sf-menu').superfish();
         }
-        if ($.getStarted.loaded) {
+        if ($.getStarted.context) {
           // Load background images on Get Started.
-          $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
+          $('.frame .background', $.getStarted.context).each( function(i) {
             var full_bg = $(this).data('full');
             $(this).attr('src', full_bg).fadeIn();
             $(this).removeClass('mobile');
@@ -29,18 +30,19 @@
         }
       } else if (toFro.to == 'mobile') {
         // mobile version
-        var src = $('.logo-img img').attr('src');
-        $('.logo-img img').attr('src', src.replace('commotion_kbabout_measure-03.png', 'Commotion_logo_mo.png')).fadeIn();
-        if ($('.region-menu .main-menu').hasClass('sf-menu')) {
-          $('.region-menu .main-menu').removeClass('sf-menu').removeClass('sf-js-enabled');
-          $('.region-menu .main-menu').unbind().addClass('menu-mobile');
-          $('.region-menu .main-menu li').unbind();
-          $('.region-menu .main-menu ul').unbind();
-          $('.region-menu .main-menu li ul').removeAttr('style');
+        var $logo = $('#logo');
+        var src = $logo.attr('src');
+        $logo.attr('src', src.replace('commotion_kbabout_measure-03.png', 'Commotion_logo_mo.png')).fadeIn();
+        if ($('#region-menu .main-menu').hasClass('sf-menu')) {
+          $('#region-menu .main-menu').removeClass('sf-menu').removeClass('sf-js-enabled');
+          $('#region-menu .main-menu').unbind().addClass('menu-mobile');
+          $('#region-menu .main-menu li').unbind();
+          $('#region-menu .main-menu ul').unbind();
+          $('#region-menu .main-menu li ul').removeAttr('style');
         }
-        if ($.getStarted.loaded) {
+        if ($.getStarted.context) {
           // Get Started, swap in mobile version.
-          $('.view-get-started.view-display-id-page .frame .background').each( function(i) {
+          $('.frame .background', $.getStarted.context).each( function(i) {
             var mobile_bg = $(this).data('mobile');
             $(this).attr('src', mobile_bg).fadeIn();
             $(this).addClass('mobile');
@@ -49,10 +51,10 @@
         }
       }
       // Skip to slide. Needs to happen after mobile jazz.
-      if (justLoaded && $.getStarted.loaded) {
+      if (justLoaded && $.getStarted.context) {
         justLoaded = false;
         anchors = [];
-        $('.view-get-started .frame-anchor').each( function(index, anchor) {
+        $('.frame-anchor', $.getStarted.context).each( function(index, anchor) {
           anchors.push('#' + $(anchor).attr("name"));
         });
         $.getStarted.anchors = anchors;
@@ -66,8 +68,7 @@
     });
 
     function getRSS() {
-      var feed_url =
-      'https://code.commotionwireless.net/activity.atom';
+      var feed_url = 'https://code.commotionwireless.net/activity.atom';
       var feed = new google.feeds.Feed(feed_url);
       feed.setNumEntries(4); // specify number of entries to load
       feed.load(function(result) {
@@ -120,7 +121,7 @@
     });
 
     // Get Started
-    if ($.getStarted.loaded) {
+    if ($.getStarted.context) {
       function scrollToFrame(frame, push) {
         // If no frame or invalid frame specified in hash, default to first.
         if (frame.indexOf('#') < 0) {
@@ -140,7 +141,7 @@
         });
       }
       // Animate Nav popouts.
-      $('.view-get-started.view-display-id-page .attachment .frame-button a.frame-nav-number').hover(function() {
+      $('.attachment .frame-button a.frame-nav-number', $.getStarted.context).hover(function() {
         $(this).stop('false', 'true').animate({width: '200px'}).addClass('active');
         $(this).siblings('.frame-button-title').stop('false', 'true').animate({width: '100%'});
       }, function() {
@@ -154,7 +155,7 @@
         scrollToFrame($.param.fragment(), false);
       });
 
-      $('.view-get-started .attachment .frame-button a').bind('click', function(event){
+      $('.attachment .frame-button a', $.getStarted.context).bind('click', function(event){
         event.preventDefault();
         var anchor = $(this).attr('href');
         scrollToFrame(anchor, true);
@@ -177,7 +178,7 @@
            $footer = $("#section-footer");
            var footerTop = $footer.position().top - pos;
            var scrollTop = $(window).scrollTop();
-           var frameHeight = $('.views-row-1 .background').height();
+           var frameHeight = $('.views-row-1 .background', $.getStarted.context).height();
            // Nav buttons positioning.
            if (scrollTop > zoneBegin) {
              $fixed.addClass('fixed');
@@ -189,19 +190,19 @@
              $fixed.css('top', 0);
            }
            // Show Nav button as active if Frame is visible.
-           $('.frame-anchor').each( function() {
+           $('.frame-anchor', $.getStarted.context).each( function() {
              var anchorTop = $(this).offset().top;
              var frameId = $(this).attr('id');
              if ((anchorTop - 50 < scrollTop) && (anchorTop + frameHeight - 51 > scrollTop)) {
-               $('.attachment a.' + frameId).addClass('active-frame');
+               $('.attachment a.' + frameId, $.getStarted.context).addClass('active-frame');
              } else {
-               $('.attachment a.' + frameId).removeClass('active-frame');
+               $('.attachment a.' + frameId, $.getStarted.context).removeClass('active-frame');
              }
 
            });
          });
       };
-      $('.view-get-started .attachment').fixer(300);
+      $('.attachment', $.getStarted.context).fixer(300);
 
       // Download page source code button
       $('#openwrt-source-btn').click(function() {
