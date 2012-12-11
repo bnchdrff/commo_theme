@@ -21,12 +21,12 @@
         }
         if ($.getStarted.context) {
           // Load background images on Get Started.
-          $('.frame .background', $.getStarted.context).each( function(i) {
-            var full_bg = $(this).data('full');
-            $(this).attr('src', full_bg).fadeIn();
-            $(this).removeClass('mobile');
+          $('.frame .background', $.getStarted.context).each( function(i, el) {
+            var full_bg = $(el).data('full');
+            $(el).attr('src', full_bg + "?nocache=" + new Date().getTime()).fadeIn();
+            $(el).removeClass('mobile');
           });
-          $('.attachment-before').show();
+          $('.attachment-before', $.getStarted.context).show();
         }
       } else if (toFro.to == 'mobile') {
         // mobile version
@@ -42,12 +42,12 @@
         }
         if ($.getStarted.context) {
           // Get Started, swap in mobile version.
-          $('.frame .background', $.getStarted.context).each( function(i) {
-            var mobile_bg = $(this).data('mobile');
-            $(this).attr('src', mobile_bg).fadeIn();
-            $(this).addClass('mobile');
+          $('.frame .background', $.getStarted.context).each( function(i, el) {
+            var mobile_bg = $(el).data('mobile');
+            $(el).attr('src', mobile_bg + "?nocache=" + new Date().getTime()).fadeIn();
+            $(el).addClass('mobile');
           });
-          $('.attachment-before').hide();
+          $('.attachment-before', $.getStarted.context).hide();
         }
       }
       // Skip to slide. Needs to happen after mobile jazz.
