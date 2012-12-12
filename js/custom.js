@@ -124,10 +124,10 @@
     if ($.getStarted.context) {
       function scrollToFrame(frame, push) {
         // If no frame or invalid frame specified in hash, default to first.
-        if (frame.indexOf('#') < 0) {
+        if (frame.charAt(0) != '#') {
           frame = '#' + frame;
         }
-        if ($.getStarted.anchors.indexOf(frame) < 0) {
+        if ($.inArray(frame, $.getStarted.anchors) == -1) {
           frame = $.getStarted.anchors[0];
         }
 
