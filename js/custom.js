@@ -7,6 +7,13 @@
     var justLoaded = true;
     $.getStarted = {};
     $.getStarted.context = ( $('body').hasClass('page-get-started') || $('body').hasClass('page-get-involved') ) ? $('#block-system-main .view-get-started:eq(0)') : null;
+    // Disable bg swap on Get Involved and for <IE 7
+    if (($.browser.msie && parseInt($.browser.version, 10) <= 7) || $('.view-get-started').hasClass('view-display-id-page_1')) {
+      $.getStarted.bgSwap = false;
+    } else {
+      $.getStarted.bgSwap = true;
+    }
+
 
     // Responsive adjustments
     $('body').bind('responsivelayout', function(ev, toFro) {
@@ -20,12 +27,14 @@
           $('#region-menu ul.sf-menu').superfish();
         }
         if ($.getStarted.context) {
-          // Load background images on Get Started.
-          $('.frame .background', $.getStarted.context).each( function(i, el) {
-            var full_bg = $(el).data('full');
-            $(el).attr('src', full_bg + "?nocache=" + new Date().getTime()).fadeIn();
-            $(el).removeClass('mobile');
-          });
+          if ($.getStarted.bgSwap) {
+            // Load background images on Get Started.
+            $('.frame .background', $.getStarted.context).each( function(i, el) {
+              var full_bg = $(el).data('full');
+              $(el).attr('src', full_bg + "?nocache=" + new Date().getTime()).fadeIn();
+              $(el).removeClass('mobile');
+            });
+          }
           $('.attachment-before', $.getStarted.context).show();
         }
       } else if (toFro.to == 'mobile') {
@@ -41,12 +50,14 @@
           $('#region-menu .main-menu li ul').removeAttr('style');
         }
         if ($.getStarted.context) {
-          // Get Started, swap in mobile version.
-          $('.frame .background', $.getStarted.context).each( function(i, el) {
-            var mobile_bg = $(el).data('mobile');
-            $(el).attr('src', mobile_bg + "?nocache=" + new Date().getTime()).fadeIn();
-            $(el).addClass('mobile');
-          });
+          if ($.getStarted.bgSwap) {
+            // Get Started, swap in mobile version.
+            $('.frame .background', $.getStarted.context).each( function(i, el) {
+              var mobile_bg = $(el).data('mobile');
+              $(el).attr('src', mobile_bg + "?nocache=" + new Date().getTime()).fadeIn();
+              $(el).addClass('mobile');
+            });
+          }
           $('.attachment-before', $.getStarted.context).hide();
         }
       }

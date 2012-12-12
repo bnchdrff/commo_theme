@@ -15,8 +15,9 @@
 .view-get-started .frame .frame-text {
   position: absolute;
   bottom: 30px;
-  right: 0;
-  background: url(../images/white80opacity.png) repeat;
+  right: 0px;
+  background-image: url('../images/white80opacity.png');
+  background-repeat: repeat;
 }
 .view-get-started.view-get-involved .frame .frame-text {
 }

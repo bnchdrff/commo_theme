@@ -1,7 +1,0 @@
-/* Internet Explore specific CSS overrides */
-
-.frame-text,
-.frame-desc {
-  display:block;
-  overflow:visible;
-}

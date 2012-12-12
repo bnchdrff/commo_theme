@@ -1093,6 +1093,7 @@ form .form-actions .form-submit:hover {
   border-right: 10px solid #FF749C;
   border-left: 10px solid #FF749C;
   padding: 0 30px;
+  position: relative;
 }
 #block-system-main .view-get-started .frame h2.frame-title {
   font-size: 28px;
