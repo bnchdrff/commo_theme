@@ -57,6 +57,14 @@
               $(el).attr('src', mobile_bg + "?nocache=" + new Date().getTime()).fadeIn();
               $(el).addClass('mobile');
             });
+          } else {
+            // Hack-ish to default to full on IE7 Get STarted.
+            if ($.browser.msie && parseInt($.browser.version, 10) <= 7 && $('.view-get-started').hasClass('view-display-id-page')) {
+              $('.frame .background', $.getStarted.context).each( function(i, el) {
+                var mobile_bg = $(el).attr('hidden');
+                $(el).attr('src', mobile_bg + "?nocache=" + new Date().getTime()).fadeIn();
+              });
+            }
           }
           $('.attachment-before', $.getStarted.context).hide();
         }
