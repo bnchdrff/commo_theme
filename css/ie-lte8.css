@@ -18,3 +18,15 @@
   width: 75%;
   min-width: 750px;
 }
+
+
+.front #block-system-main .panel-pane.pane-1 .pane-content,
+.front #block-system-main .panel-pane.pane-2 .pane-content,
+.front #block-system-main .panel-pane.pane-1,
+.front #block-system-main .panel-pane.pane-2 {
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 440px;
+}
