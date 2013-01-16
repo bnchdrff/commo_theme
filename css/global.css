@@ -1206,6 +1206,9 @@ form .form-actions .form-submit:hover {
   background-color: #fff;
   width: 0px;
 }
+#block-boxes-recent-activity {
+  overflow: hidden;
+}
 
 /**
  * Print styles
