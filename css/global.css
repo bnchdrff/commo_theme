@@ -98,7 +98,7 @@ form .form-actions .form-submit:hover {
 #region-branding .logo-img img {
   position: relative;
   z-index: 99;
-  display: none;
+  /* display: none; */
 }
 #region-branding .logo-img {
   width: 250px;
@@ -526,6 +526,29 @@ form .form-actions .form-submit:hover {
   background: #ccc url(../images/tiny_right_arrow.png) no-repeat 0px 5px;
 }
 
+/* Sidebar third level */
+#region-sidebar-second .block ul.menu li ul li ul li a,
+#region-sidebar-second .block ul.menu li ul li ul li {
+}
+
+#region-sidebar-second ul.menu li ul li ul,
+/* #region-sidebar-second .block ul.menu li ul li ul li.active,
+#region-sidebar-second .block ul.menu li ul li ul li a.active,
+#region-sidebar-second ul.menu li ul li ul li:hover,
+*/
+#region-sidebar-second ul.menu li ul li ul li 
+ {
+  background-color: #ccc;
+  border-left: 2px solid #FE739B;
+}
+#region-sidebar-second ul.menu li ul li ul li a.active,
+#region-sidebar-second ul.menu li ul li ul li a:focus,
+#region-sidebar-second ul.menu li ul li ul li a:hover {
+  background: #ccc url(../images/tiny_right_arrow.png) no-repeat 0px 5px;
+}
+
+
+
 /* Sidebar feedback button */
 #region-sidebar-second .block-feedback {
   margin-bottom: 0;
@@ -604,7 +627,7 @@ form .form-actions .form-submit:hover {
   margin: 20px 0;
 }
 #zone-footer-wrapper .region.grid-3 {
-  border-top: 1px solid #000;
+  /* border-top: 1px solid #000; */
   margin-bottom: 20px;
 }
 #zone-footer-wrapper .block-title {
@@ -685,7 +708,7 @@ form .form-actions .form-submit:hover {
 }
 .front #zone-preface-wrapper .boxes-box-content p {
   text-align: center;
-  font-size: 33px;
+  font-size: 2.5em;
 }
 .front #zone-preface-wrapper .boxes-box-content hr {
   background-color: #ff739c;
@@ -719,6 +742,9 @@ form .form-actions .form-submit:hover {
   width: 260px;
   height: 300px;
   display:block;
+}
+.front #zone-content-wrapper .pane-content a.circ {
+
 }
 /*.front #zone-content-wrapper .pane-1 a:focus,
 .front #zone-content-wrapper .pane-1 a:hover {
@@ -962,33 +988,43 @@ form .form-actions .form-submit:hover {
   background:#00FFCF;
   padding:12px 20px;
   border-radius:10px;
+  margin-right:10px;
 }
 
-.context-new-download #zone-content .block .content {
+.context-download #zone-content .block .content {
   max-width:none;
 }
 
-.context-new-download thead th {
+.context-download #zone-content .content table.files {
+  width:960px;
+}
+
+.context-download tr.release th {
+  background:#cccccc;
+  font-size:14px;
+}
+
+.context-download thead th {
   text-align:center;
 }
 
-.context-new-download th {
+.context-download th {
   font-weight:bold;
 }
 
-.context-new-download th a {
+.context-download th a {
   display:inline;
 }
 
-.context-new-download td {
+.context-download td {
   text-align:center;
 }
 
-.context-new-download td.filename {
+.context-download td.filename {
   text-align:left;
 }
 
-#openwrt-source {
+#node-page-100 .git-box {
   display:none;
 }
 
@@ -1023,7 +1059,12 @@ form .form-actions .form-submit:hover {
 }
 
 .git-box li a {
-  background:-moz-linear-gradient(center top , #F8F8F8, #DDDDDD) repeat scroll 0 0 transparent;
+  background:linear-gradient(center top , #F8F8F8, #DDDDDD);
+  background:-o-linear-gradient(center top , #F8F8F8, #DDDDDD);
+  background:-moz-linear-gradient(center top , #F8F8F8, #DDDDDD);
+  background:-webkit-linear-gradient(center top , #F8F8F8, #DDDDDD);
+  background:-ms-gradient(center top , #F8F8F8, #DDDDDD);
+  background:-webkit-gradient(linear,left top,left bottom,color-stop(0, #F8F8F8),color-stop(1, #DDDDDD));
   border:1px solid #BBBBBB;
   padding:0 10px 0 11px;
   display:block;
@@ -1031,12 +1072,17 @@ form .form-actions .form-submit:hover {
 }
 
 #block-system-main .git-box ul.git_url_list li a.selected {
+  background:linear-gradient(center top , #CCCCCC, #AAAAAA) repeat scroll 0 0 transparent;
+  background:-o-linear-gradient(center top , #CCCCCC, #AAAAAA) repeat scroll 0 0 transparent;
+  background:-webkit-linear-gradient(center top , #CCCCCC, #AAAAAA) repeat scroll 0 0 transparent;
   background:-moz-linear-gradient(center top , #CCCCCC, #AAAAAA) repeat scroll 0 0 transparent;
+  background:-ms-linear-gradient(center top , #CCCCCC, #AAAAAA) repeat scroll 0 0 transparent;
+  background:-webkit-gradient(linear,left top,left bottom,color-stop(0, #CCCCCC),color-stop(1, #AAAAAA));
   color:#000000;
   border:1px solid #BBBBBB;
 }
 
-#block-system-main .git-box ul li a:hover, .git-box ul li a:focus {
+#block-system-main .git-box ul li a:hover/*, .git-box ul li a:focus*/ {
   background:#E8FF00;
   color:#000000;
   border:1px solid #E8FF00;
@@ -1311,3 +1357,106 @@ form .form-actions .form-submit:hover {
   }
 
 }
+
+.warning-label {
+  border:5px solid #000000;
+  max-width:40%;
+  text-align:center;
+  float:right;
+}
+
+.warning-label .warning-top {
+  background-color:#E87600;
+  border-bottom:5px solid black;
+}
+
+.warning-label .warning-top h2 {
+  background:url('../images/alert50.png') no-repeat left center;
+  padding:10px 0 0 55px;
+  display:inline-block;
+  margin-bottom:0 !important;
+}
+
+.warning-label .warning-bottom ul {
+  text-align:left;
+}
+
+h3 { font-size: 16px; }
+
+#signing-key {
+padding-right:35px;
+background:url(../images/key.png) center right no-repeat;
+}
+
+.signature {
+padding:5px 21px 5px 0px;
+margin-left:10px;
+background:url(../images/seal.png) center right no-repeat;
+}
+
+.signature span {
+display:inline-block;
+text-indent:-9999px;
+}
+
+.context-how-verify-signatures-downloads #zone-content .block .content {
+max-width:700px;
+}
+
+ul.nice-menu {
+  margin-left: 3em;
+}
+ul.nice-menu, ul.nice-menu ul {
+  border-width: 0;
+  border-style: none;
+}
+ul.nice-menu-down li {
+  border-top: none;
+}
+ul.nice-menu li {
+  background-color: #FFFFFF;
+  border: none;
+  margin-right: .5em;
+}
+
+ul.nice-menu li a, ul.nice-menu li a:visited {
+  color: #000000;
+  font: 13px AsapRegular,Sans-serif;
+  margin-bottom: 3px;
+  margin-right: 20px;
+  padding: 3px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  markgin-left: 5px;
+}
+ul.nice-menu li a:hover {
+  border-bottom: 3px solid #E8FF00;
+  margin-bottom: 0;
+  background-color: #FFFFFF;
+}
+ul.nice-menu ul {
+  background: url("/sites/dev.commotionwireless.net/themes/kb/images/arrow_dropdown.png") no-repeat scroll 20px 0;
+  top: 2em;
+}
+ul.nice-menu ul li {
+  width: 14.5em;
+  background-color: #00FFCF;
+  border: none;
+  text-transform: none;
+}
+ul.nice-menu ul li a {
+  text-transform: none;
+  width: 13em;
+}
+ul.nice-menu ul li a:hover {
+  background-color: #E8FF00;
+  width: 12.5em;
+}
+ul.nice-menu-down li.menuparent {
+  background: url("/sites/dev.commotionwireless.net/modules/contrib/nice_menus/images/arrow-down.png") no-repeat scroll right center;
+}
+ul.nice-menu-down li.menuparent a {
+  padding-left: 1em;
+}
+ul.nice-menu-down li.menuparent:hover {
+  background: url("/sites/dev.commotionwireless.net/modules/contrib/nice_menus/images/arrow-down.png") no-repeat scroll right center #FFFFFF;

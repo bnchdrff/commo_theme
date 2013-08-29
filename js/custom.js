@@ -1,7 +1,7 @@
 (function($) {
 
   // can't be called in doc.ready or onload
-  google.load("feeds", "1");
+  //google.load("feeds", "1");
 
   $( document ).ready( function() {
     var justLoaded = true;
@@ -16,13 +16,16 @@
 
 
     // Responsive adjustments
+   
     $('body').bind('responsivelayout', function(ev, toFro) {
       if (toFro.from == 'mobile' || (toFro.to != 'mobile' && toFro.from === undefined)) {
         // larger than mobile
-        var $logo = $('#logo');
-        var src = $logo.attr('src');
-        $logo.attr('src', src.replace('Commotion_logo_mo.png', 'commotion_kbabout_measure-03.png')).fadeIn();
-        if (!$('#region-menu .main-menu').hasClass('sf-menu')) {
+
+      //  var $logo = $('#logo');
+      //  var src = $logo.attr('src');
+      //  $logo.attr('src', src.replace('Commotion_logo_mo.png', 'commotion_kbabout_measure-03.png')).fadeIn(0);
+
+	if (!$('#region-menu .main-menu').hasClass('sf-menu')) {
           $('#region-menu .main-menu').addClass('sf-menu').addClass('sf-js-enabled').removeClass('menu-mobile');
           $('#region-menu ul.sf-menu').superfish();
         }
@@ -31,7 +34,7 @@
             // Load background images on Get Started.
             $('.frame .background', $.getStarted.context).each( function(i, el) {
               var full_bg = $(el).data('full');
-              $(el).attr('src', full_bg + "?nocache=" + new Date().getTime()).fadeIn();
+              $(el).attr('src', full_bg + "?nocache=" + new Date().getTime()).fadeIn(0);
               $(el).removeClass('mobile');
             });
           }
@@ -39,10 +42,12 @@
         }
       } else if (toFro.to == 'mobile') {
         // mobile version
-        var $logo = $('#logo');
-        var src = $logo.attr('src');
-        $logo.attr('src', src.replace('commotion_kbabout_measure-03.png', 'Commotion_logo_mo.png')).fadeIn();
-        if ($('#region-menu .main-menu').hasClass('sf-menu')) {
+
+       // var $logo = $('#logo');
+       // var src = $logo.attr('src');
+       // $logo.attr('src', src.replace('commotion_kbabout_measure-03.png', 'Commotion_logo_mo.png')).fadeIn(0);
+
+       if ($('#region-menu .main-menu').hasClass('sf-menu')) {
           $('#region-menu .main-menu').removeClass('sf-menu').removeClass('sf-js-enabled');
           $('#region-menu .main-menu').unbind().addClass('menu-mobile');
           $('#region-menu .main-menu li').unbind();
@@ -54,7 +59,7 @@
             // Get Started, swap in mobile version.
             $('.frame .background', $.getStarted.context).each( function(i, el) {
               var mobile_bg = $(el).data('mobile');
-              $(el).attr('src', mobile_bg + "?nocache=" + new Date().getTime()).fadeIn();
+              $(el).attr('src', mobile_bg + "?nocache=" + new Date().getTime()).fadeIn(0);
               $(el).addClass('mobile');
             });
           } else {
@@ -62,7 +67,7 @@
             if ($.browser.msie && parseInt($.browser.version, 10) <= 7 && $('.view-get-started').hasClass('view-display-id-page')) {
               $('.frame .background', $.getStarted.context).each( function(i, el) {
                 var mobile_bg = $(el).attr('hidden');
-                $(el).attr('src', mobile_bg + "?nocache=" + new Date().getTime()).fadeIn();
+                $(el).attr('src', mobile_bg + "?nocache=" + new Date().getTime()).fadeIn(0);
               });
             }
           }
@@ -86,34 +91,35 @@
       $('.equal-height-container').height(intro_height + 20);
     });
 
-    function getRSS() {
-      var feed_url = 'https://code.commotionwireless.net/activity.atom';
-      var feed = new google.feeds.Feed(feed_url);
-      feed.setNumEntries(4); // specify number of entries to load
-      feed.load(function(result) {
-        if (!result.error) {
-          var container = $('#recent-activity-container');
-          var output = '<ul class="rss-feed-items">';
-          for (var i = 0; i < result.feed.entries.length; i++) {
-            var entry = result.feed.entries[i];
-            output += '<li><a target="_blank" href="' + entry.link + '" title="' + entry.title + '">' + entry.title + '</a>';
-            if (entry.author.length > 0) {
-              output += ' - ' + entry.author;
-            }
-            if (entry.publishedDate.length > 0) {
-              var date = $.timeago(new Date(entry.publishedDate));
-              output += ' - <span class="git-date" title="' + date + '" >' + date + '</div>';
-            }
-            output += '</li>';
-          }
-          output += '</ul>';
-          container.append(output);
-        }
-      });
-    }
-    if ( $('#recent-activity-container').length > 0) {
-      google.setOnLoadCallback(getRSS);
-    }
+
+//    function getRSS() {
+//     var feed_url = 'https://code.commotionwireless.net/activity.atom';
+//      var feed = new google.feeds.Feed(feed_url);
+//      feed.setNumEntries(4); // specify number of entries to load
+//      feed.load(function(result) {
+//        if (!result.error) {
+//          var container = $('#recent-activity-container');
+//          var output = '<ul class="rss-feed-items">';
+//          for (var i = 0; i < result.feed.entries.length; i++) {
+//            var entry = result.feed.entries[i];
+//            output += '<li><a target="_blank" href="' + entry.link + '" title="' + entry.title + '">' + entry.title + '</a>';
+//            if (entry.author.length > 0) {
+//              output += ' - ' + entry.author;
+//            }
+//            if (entry.publishedDate.length > 0) {
+//              var date = $.timeago(new Date(entry.publishedDate));
+//              output += ' - <span class="git-date" title="' + date + '" >' + date + '</div>';
+//            }
+//            output += '</li>';
+//          }
+//          output += '</ul>';
+//          container.append(output);
+//        }
+//      });
+//    }
+//    #if ( $('#recent-activity-container').length > 0) {
+//	    #  google.setOnLoadCallback(getRSS);
+//	    #}
 
     // feedback & report buttons hover
     $('#boxes-box-feedback a').hover( function() {
@@ -223,10 +229,6 @@
       };
       $('.attachment', $.getStarted.context).fixer(300);
 
-      // Download page source code button
-      $('#openwrt-source-btn').click(function() {
-        $('#openwrt-source').slideToggle();
-      });
     }
 
   })

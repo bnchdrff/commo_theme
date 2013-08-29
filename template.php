@@ -11,6 +11,24 @@
  * for more information on this topic.
  */
 
+function kb_preprocess_html(&$vars) {
+$image_src = array(
+  '#tag' => 'link',
+  '#attributes' => array(
+    'ref' => 'image_src',
+    'href' => 'https://commotionwireless.net/sites/commotionwireless.net/files/commotion_kbabout_measure-03.png',
+  )
+);
+
+$image_src = array(
+  'ref' => 'image_src',
+  'href' => 'https://commotionwireless.net/sites/commotionwireless.net/files/commotion_kbabout_measure-03.png'
+);
+
+drupal_add_html_head_link($image_src);
+
+}
+
 function kb_pager($variables) {
   $tags = $variables['tags'];
   $element = $variables['element'];
