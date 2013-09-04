@@ -138,17 +138,3 @@ function kb_pager($variables) {
   }
 }
 
-/**
- * Implements template_preprocess_page().
- */
-function kb_preprocess_page(&$vars) {
-  // Add special js and css for commo_ck_page nodes.
-  if (isset($vars['node']) && $vars['node']->type == 'commo_ck_page') {
-    drupal_add_js(drupal_get_path('theme', 'kb') . '/js/commo_kb.js', 'file');
-    //drupal_add_js(array('commo_ck' => $settings), 'setting');
-    $vars['scripts'] = drupal_get_js();
-    drupal_add_css(drupal_get_path('theme', 'kb') . '/css/commo_kb.css');
-    $vars['styles'] = drupal_get_css();
-  }
-}
-
