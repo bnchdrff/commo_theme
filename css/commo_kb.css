@@ -1,0 +1,81 @@
+/**
+ * @file
+ * Styles for commo_kb_page nodes
+ */
+
+.commo_ck-links a:link,
+.commo_ck-links a:visited
+.commo_ck-links a:active,
+.commo_ck-links a:hover,
+.commo_ck-links a:focus {
+  display: block;
+  outline: 0;
+  background: transparent url(../images/commo_ck/CCK_pdf.png) 0 0 no-repeat;
+  padding-top: 127px;
+  background-clip: padding-box;
+  text-decoration: none;
+}
+
+.commo_ck-links .commo_ck-download-pdf-link:hover,
+.commo_ck-links .commo_ck-download-pdf-link:active,
+.commo_ck-links .commo_ck-download-pdf-link:focus {
+  background-image: url(../images/commo_ck/CCK_pdf_rollover.png);
+}
+
+.commo_ck-links .commo_ck-send-feedback:link,
+.commo_ck-links .commo_ck-send-feedback:visited {
+  background-image: url(../images/commo_ck/CCK_ask_questions.png);
+}
+
+.commo_ck-links .commo_ck-send-feedback:hover,
+.commo_ck-links .commo_ck-send-feedback:active,
+.commo_ck-links .commo_ck-send-feedback:focus {
+  background-image: url(../images/commo_ck/CCK_ask_questions_rollover.png);
+}
+
+.commo_ck-links a:first-child {
+  margin-bottom: 20px;
+}
+
+.field-name-field-commo-ck-tags .field-item a:link,
+.field-name-field-commo-ck-tags .field-item a:visited,
+.field-name-field-commo-ck-tags .field-item a:active
+.field-name-field-commo-ck-tags .field-item a:hover,
+.block-views-commo-ck-tags-block a:link,
+.block-views-commo-ck-tags-block a:visited,
+.block-views-commo-ck-tags-block a:active
+.block-views-commo-ck-tags-block a:hover {
+  display: block;
+  font: normal 17px/17px AsapRegular !important;
+  background: #00ffcf;
+  color: black !important;
+  margin: 20px 0 20px 20px;
+  padding: 4px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0 !important;
+}
+
+.field-name-field-commo-ck-tags .field-item a {
+  float: left;
+  margin: 20px 0 20px 20px;
+}
+
+.block-views-commo-ck-tags-block a sup {
+  vertical-align: super;
+  font-size: smaller;
+  line-height: normal;
+}
+
+.commo_ck-links a div,
+.field-name-field-commo-ck-tags .field-label,
+.block-views-commo-ck-tags-block .block-title {
+  background: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  padding: 11px 15px;
+}
+
