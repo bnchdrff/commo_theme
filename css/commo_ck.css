@@ -3,6 +3,14 @@
  * Styles for commo_kb_page nodes
  */
 
+#block-menu-block-11 ul.menu {
+}
+
+#block-menu-block-11 ul.menu > li.expanded {
+  list-style-image: none;
+  list-style-type: none;
+}
+
 .commo_ck-links a:link,
 .commo_ck-links a:visited
 .commo_ck-links a:active,
