@@ -3,12 +3,52 @@
  * Styles for commo_kb_page nodes
  */
 
-#block-menu-block-11 ul.menu {
+#block-menu-block-11 .menu-block-11 > ul.menu > li {
+  margin: 0;
+  padding: 0;
+}
+
+#block-menu-block-11 ul.menu > li.expanded span {
+  font: normal 36px/36px AsapRegular;
+  color: black;
+  background: #e8ff00;
+  border-bottom: 1px solid black;
+  display: block;
+  margin: 0;
+  padding: 15px 15px 13px 15px;
 }
 
 #block-menu-block-11 ul.menu > li.expanded {
   list-style-image: none;
   list-style-type: none;
+}
+
+#block-menu-block-11 ul ul {
+  margin: 20px 0 20px 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#block-menu-block-11 ul ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 35px;
+}
+
+#block-menu-block-11 ul ul li a:link,
+#block-menu-block-11 ul ul li a:visited,
+#block-menu-block-11 ul ul li a:active,
+#block-menu-block-11 ul ul li a:hover {
+  color: black;
+  border: none;
+  text-decoration: none;
+}
+
+#block-menu-block-11 ul ul li.active {
+  border-left: 4px solid #FE739B;
+  padding-left: 31px;
+  background: #eae8e8;
 }
 
 .commo_ck-links a:link,
@@ -85,5 +125,45 @@
   font-size: 13px;
   line-height: 19px;
   padding: 11px 15px;
+}
+
+#block-system-main .node-commo-ck-page {
+  background: #eae8e8;
+}
+
+#block-system-main .node-commo-ck-page h1 {
+  margin: 0 0 20px 0;
+  padding: 15px 0 13px 15px;
+  background: #333;
+  color: white;
+  font: normal 30px/30px AsapRegular;
+}
+
+#block-system-main .node-commo-ck-page section {
+  border-bottom: 1px solid white;
+  margin-bottom: 25px;
+}
+
+#block-system-main .node-commo-ck-page h2 {
+  margin: 0 0 20px 0;
+  border-left: 4px solid #FE739B;
+  padding: 0 0 0 13px;
+  font: normal 15px/15px AsapBold;
+}
+
+#block-system-main .node-commo-ck-page p,
+#block-system-main .node-commo-ck-page li {
+  padding: 0;
+  margin: 0 0 25px 15px;
+}
+
+#block-system-main .node-commo-ck-page ul {
+  margin: 0;
+  padding: 0;
+}
+
+#block-system-main .node-commo-ck-page li {
+  list-style-type: none;
+  list-style-image: none;
 }
 
