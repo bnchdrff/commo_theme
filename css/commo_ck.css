@@ -167,3 +167,37 @@
   list-style-image: none;
 }
 
+#block-system-main .node-commo-ck-page p.tip {
+  border-top: 1px dashed #FE739B;
+  margin: 0 20px 10px 15px;
+  padding: 30px 0 20px 0;
+  position: relative
+}
+
+#block-system-main .node-commo-ck-page p.tip:after {
+  content: '';
+  background: transparent url(../images/commo_ck/CCK_tip_icon.png) 0 0 no-repeat;
+  position: absolute;
+  left: 15px;
+  top: -13px;
+  height: 32px;
+  width: 32px;
+}
+
+#block-system-main .node-commo-ck-page .references,
+#block-system-main .node-commo-ck-page .related-information,
+#block-system-main .node-commo-ck-page .external-resources {
+  background-color: #4d4d4d;
+  color: white;
+  margin-bottom: 0;
+  padding: 25px 0;
+}
+
+#block-system-main .node-commo-ck-page .references a,
+#block-system-main .node-commo-ck-page .related-information a,
+#block-system-main .node-commo-ck-page .external-resources a {
+  color: white !important;
+  text-decoration: underline !important;
+  border: none !important;
+}
+
