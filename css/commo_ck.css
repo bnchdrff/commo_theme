@@ -8,10 +8,15 @@
   padding: 0;
 }
 
-#block-menu-block-11 ul.menu > li.expanded span {
+#block-menu-block-11 ul.menu > li.expanded span,
+#block-menu-block-11 ul.menu > li.expanded > a:link,
+#block-menu-block-11 ul.menu > li.expanded > a:visited,
+#block-menu-block-11 ul.menu > li.expanded > a:active,
+#block-menu-block-11 ul.menu > li.expanded > a:hover {
   font: normal 36px/36px AsapRegular;
   color: black;
   background: #e8ff00;
+  text-decoration: none;
   border-bottom: 1px solid black;
   display: block;
   margin: 0;
@@ -148,23 +153,30 @@
   margin: 0 0 20px 0;
   border-left: 4px solid #FE739B;
   padding: 0 0 0 13px;
-  font: normal 15px/15px AsapBold;
+  font: normal 22px/22px AsapBold;
+  letter-spacing: 0;
 }
 
-#block-system-main .node-commo-ck-page p,
-#block-system-main .node-commo-ck-page li {
+#block-system-main .node-commo-ck-page h3 {
+  margin: 0 0 20px 15px;
   padding: 0;
-  margin: 0 0 25px 15px;
+  font: normal 16px/16px AsapBold;
+  letter-spacing: 0;
+  border-bottom: 1px solid #FE739B;
+  display: inline-block;
+  text-transform: none;
+}
+
+#block-system-main .node-commo-ck-page p {
+  padding: 0;
+  margin: 0 15px 25px 15px;
 }
 
 #block-system-main .node-commo-ck-page ul {
-  margin: 0;
-  padding: 0;
+  margin-left: 15px;
 }
 
 #block-system-main .node-commo-ck-page li {
-  list-style-type: none;
-  list-style-image: none;
 }
 
 #block-system-main .node-commo-ck-page p.tip {
@@ -199,5 +211,44 @@
   color: white !important;
   text-decoration: underline !important;
   border: none !important;
+}
+
+#block-system-main .node-commo-ck-page code,
+#block-system-main .node-commo-ck-page pre {
+  font-family: monospace;
+  background-color: #D8F2FC;
+}
+
+#block-system-main .node-commo-ck-page pre {
+  border: none;
+  padding: 0;
+  margin: 0 15px 25px 15px;
+}
+
+#block-system-main .node-commo-ck-page hr {
+  max-width: 100%;
+  background-color: black;
+  margin: 30px 20px 30px 15px;
+}
+
+#block-system-main .node-commo-ck-page dl {
+  padding: 0;
+  margin: 0 15px 25px 15px;
+}
+
+#block-system-main .node-commo-ck-page dt {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+#block-system-main .node-commo-ck-page dd {
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-size: 100%;
+}
+
+#block-system-main .node-commo-ck-page p:first-child img:first-child {
+  padding: 15px 0;
 }
 
