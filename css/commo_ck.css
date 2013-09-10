@@ -20,7 +20,7 @@
   border-bottom: 1px solid black;
   display: block;
   margin: 0;
-  padding: 15px 15px 13px 15px;
+  padding: 15px 20px 13px 15px;
 }
 
 #block-menu-block-11 ul.menu > li.expanded {
@@ -41,19 +41,32 @@
   padding: 0 0 0 35px;
 }
 
+#block-menu-block-11 ul ul li a {
+  display: block;
+}
+
 #block-menu-block-11 ul ul li a:link,
-#block-menu-block-11 ul ul li a:visited,
-#block-menu-block-11 ul ul li a:active,
-#block-menu-block-11 ul ul li a:hover {
+#block-menu-block-11 ul ul li a:visited {
   color: black;
   border: none;
   text-decoration: none;
 }
 
+#block-menu-block-11 ul ul li:hover {
+  color: black;
+  border: none;
+  text-decoration: none;
+  background: #eae8e8;
+}
+
 #block-menu-block-11 ul ul li.active {
   border-left: 4px solid #FE739B;
   padding-left: 31px;
-  background: #eae8e8;
+  background: #e8ff00;
+}
+
+#block-menu-block-11 ul ul li.active:hover {
+  background: #e8ff00;
 }
 
 .commo_ck-links a:link,
@@ -98,15 +111,23 @@
 .block-views-commo-ck-tags-block a:visited,
 .block-views-commo-ck-tags-block a:active
 .block-views-commo-ck-tags-block a:hover {
-  display: block;
+  display: inline-block;
   font: normal 17px/17px AsapRegular !important;
   background: #00ffcf;
   color: black !important;
-  margin: 20px 0 20px 20px;
+  margin: 0 0 20px 15px;
   padding: 4px;
   text-transform: uppercase;
   text-decoration: none;
   border: 0 !important;
+}
+
+.field-name-field-commo-ck-tags .field-item {
+  margin-top: 20px;
+}
+
+.block-views-commo-ck-tags-block div:first-child {
+  margin-top: 20px;
 }
 
 .field-name-field-commo-ck-tags .field-item a {
@@ -116,7 +137,7 @@
 
 .block-views-commo-ck-tags-block a sup {
   vertical-align: super;
-  font-size: smaller;
+  font-size: 9px;
   line-height: normal;
 }
 
@@ -169,11 +190,11 @@
 
 #block-system-main .node-commo-ck-page p {
   padding: 0;
-  margin: 0 15px 25px 15px;
+  margin: 0 20px 25px 15px;
 }
 
 #block-system-main .node-commo-ck-page ul {
-  margin-left: 15px;
+  margin: 0 20px 25px 15px;
 }
 
 #block-system-main .node-commo-ck-page li {
@@ -183,7 +204,12 @@
   border-top: 1px dashed #FE739B;
   margin: 0 20px 10px 15px;
   padding: 30px 0 20px 0;
-  position: relative
+  position: relative;
+  font-family: AsapItalic;
+}
+
+#block-system-main .node-commo-ck-page p.tip:before {
+  content: 'Tip: ';
 }
 
 #block-system-main .node-commo-ck-page p.tip:after {
@@ -222,18 +248,19 @@
 #block-system-main .node-commo-ck-page pre {
   border: none;
   padding: 0;
-  margin: 0 15px 25px 15px;
+  margin: 0 20px 25px 15px;
 }
 
 #block-system-main .node-commo-ck-page hr {
   max-width: 100%;
-  background-color: black;
+  background-color: transparent;
+  border-bottom: 1px dashed black;
   margin: 30px 20px 30px 15px;
 }
 
 #block-system-main .node-commo-ck-page dl {
   padding: 0;
-  margin: 0 15px 25px 15px;
+  margin: 0 20px 25px 15px;
 }
 
 #block-system-main .node-commo-ck-page dt {
@@ -246,9 +273,39 @@
   margin: 0;
   padding: 0 0 10px 0;
   font-size: 100%;
+  font-family: AsapItalic;
+  font-style: normal;
 }
 
 #block-system-main .node-commo-ck-page p:first-child img:first-child {
   padding: 15px 0;
+}
+
+#block-system-main .node-commo-ck-page table {
+  border: 0;
+  padding: 0;
+  margin: 0 20px 25px 15px;
+  width: auto;
+}
+
+#block-system-main .node-commo-ck-page tr {
+  border-bottom: 1px dashed black;
+}
+
+#block-system-main .node-commo-ck-page thead tr,
+#block-system-main .node-commo-ck-page tfoot tr {
+  border: none;
+}
+
+#block-system-main .node-commo-ck-page thead th {
+  background: #fffeee;
+  font-family: AsapBold;
+  border: none;
+}
+
+#block-system-main .node-commo-ck-page tfoot th {
+  background: #333;
+  color: white;
+  font-family: AsapBold;
 }
 
