@@ -301,11 +301,12 @@
   padding-left: 0;
 }
 
-#block-system-main .node-commo-ck-page tr:hover td,
-#block-system-main .node-commo-ck-page tr.even:hover td.active,
-#block-system-main .node-commo-ck-page tr.odd:hover td.active {
+#block-system-main .node-commo-ck-page tbody tr:hover td,
+#block-system-main .node-commo-ck-page tbody tr.even:hover td.active,
+#block-system-main .node-commo-ck-page tbody tr.odd:hover td.active {
   background: white;
 }
+
 #block-system-main .node-commo-ck-page thead tr,
 #block-system-main .node-commo-ck-page tfoot tr {
   border: none;
