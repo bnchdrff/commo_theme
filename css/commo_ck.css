@@ -328,3 +328,8 @@
   font-family: AsapBold;
 }
 
+#block-system-main .node-commo-ck-page tfoot th:first-child,
+#block-system-main .node-commo-ck-page tfoot td:first-child {
+  padding: 5px;
+}
+
