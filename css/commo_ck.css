@@ -105,12 +105,8 @@
 
 .field-name-field-commo-ck-tags .field-item a:link,
 .field-name-field-commo-ck-tags .field-item a:visited,
-.field-name-field-commo-ck-tags .field-item a:active
-.field-name-field-commo-ck-tags .field-item a:hover,
 .block-views-commo-ck-tags-block a:link,
-.block-views-commo-ck-tags-block a:visited,
-.block-views-commo-ck-tags-block a:active
-.block-views-commo-ck-tags-block a:hover {
+.block-views-commo-ck-tags-block a:visited {
   display: inline-block;
   font: normal 17px/17px AsapRegular !important;
   background: #00ffcf;
@@ -120,6 +116,13 @@
   text-transform: uppercase;
   text-decoration: none;
   border: 0 !important;
+}
+
+.field-name-field-commo-ck-tags .field-item a:active,
+.field-name-field-commo-ck-tags .field-item a:hover,
+.block-views-commo-ck-tags-block a:active,
+.block-views-commo-ck-tags-block a:hover {
+  background: white !important;
 }
 
 .field-name-field-commo-ck-tags .field-item {
