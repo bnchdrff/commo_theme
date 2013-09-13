@@ -205,8 +205,9 @@
 
 #block-system-main .node-commo-ck-page p.tip {
   border-top: 1px dashed #FE739B;
-  margin: 0 20px 10px 15px;
-  padding: 30px 0 20px 0;
+  border-bottom: 1px dashed #FE739B;
+  margin: 0 20px 25px 15px;
+  padding: 30px 0 25px 0;
   position: relative;
   font-family: AsapItalic;
 }
