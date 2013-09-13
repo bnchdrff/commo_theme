@@ -284,6 +284,23 @@
   padding: 15px 0;
 }
 
+#block-system-main .node-commo-ck-page figure {
+  margin: 0 20px 25px 15px;
+  padding: 0;
+}
+
+#block-system-main .node-commo-ck-page figure img {
+  margin: 0;
+  padding: 0;
+}
+
+#block-system-main .node-commo-ck-page figcaption {
+  margin: 0;
+  padding: 15px 0 25px 0;
+  font-style: normal;
+  font-family: AsapItalic;
+}
+
 #block-system-main .node-commo-ck-page table {
   border: 0;
   padding: 0;
